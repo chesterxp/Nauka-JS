@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Frontend Developer</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="odliczanie()">
+
+
+<!-----------------------header------------------------->
+<header>
+  
+</header>
+<!-----------------------//header----------------------->
+
+<!-----------------------box1------------------------->
+<section id="flex">
+  <h1 class="title">Cwiczenia z flex + JQuery</h1>
+  
+  <div class="buttons">
+    <button id="all">All</button>
+    <button id="pole1">Parzyste</button>
+    <button id="pole2">Nieparzyste</button>
+  </div>
+
+  
+  <div id="box">
+    <div class="flexy flexy1" id="flex">0</div>
+    <div class="flexy flexy2" id="flex1">1</div>
+    <div class="flexy flexy1" id="flex2">2</div>
+    <div class="flexy flexy2" id="flex3">3</div>
+    <div class="flexy flexy1" id="flex4">4</div>
+    <div class="flexy flexy2" id="flex4">5</div>
+    <div class="flexy flexy1" id="flex4">6</div>
+    <div class="flexy flexy2" id="flex4">7</div>
+    <div class="flexy flexy1" id="flex4">8</div>
+    <div class="flexy flexy2" id="flex4">9</div>
+    <div class="flexy flexy1" id="flex4">10</div>
+    <div class="flexy flexy2" id="flex4">11</div>
+  </div>
+</section>
+<!-----------------------//box1----------------------->
+
+<section id="stoper">
+  <h1 class="title">Stoper</h1>
+  <div class="stop">
+    <h3>Stoper</h3>
+    <button id="startButton">START</button>
+    <button id="stopButton">STOP</button>
+    <p>Aktualny czas który upłynął to: <span id="seconds">0</span></p>
+  </div>
+</section>
+
+<div id="audio">
+  <h1 class="title">Audio bez przeładowania strony</h1>
+  <a href="https://www.kasandbox.org/programming-sounds/rpg/giant-no.mp3" id="mp3">Kliknij na mnie</a>
+</div>
+
+<div id="zegar">
+<!--  <h1 class="title">Zegar</h1>-->
+  <div id="timer">powinna bbyć godzina </div>
+</div>
+
+<div class="faq">
+  <h1 class="title">Przykładowe FAQ</h1>
+  <h3>FAQ - wersja 1</h3>
+  <div class="box">
+  
+  <h2 class="open2">Pytanie nr 1 - Jak nazywa sie popularny jezyk programowania webowego?</h2>
+  <p class="answer">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem possimus fugiat, nostrum. Placeat, nisi iure odio, natus beatae doloribus minus!</p>
+  <h2 class="open">Pytanie nr 2 - Jak nazywa sie popularny jezyk programowania webowego?</h2>
+  <p class="answer">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem possimus fugiat, nostrum. Placeat, nisi iure odio, natus beatae doloribus minus!</p>
+  <h2 class="open">Pytanie nr 3 - Jak nazywa sie popularny jezyk programowania webowego?</h2>
+  <p class="answer">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem possimus fugiat, nostrum. Placeat, nisi iure odio, natus beatae doloribus minus!</p>
+  <h2 class="open">Pytanie nr 4 - Jak nazywa sie popularny jezyk programowania webowego?</h2>
+  <p class="answer">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem possimus fugiat, nostrum. Placeat, nisi iure odio, natus beatae doloribus minus!</p>
+  <h2 class="open">Pytanie nr 5 - Jak nazywa sie popularny jezyk programowania webowego?</h2>
+  <p class="answer">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem possimus fugiat, nostrum. Placeat, nisi iure odio, natus beatae doloribus minus!</p>
+  <h2 class="open">Pytanie nr 6 - Jak nazywa sie popularny jezyk programowania webowego?</h2>
+  <p class="answer">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem possimus fugiat, nostrum. Placeat, nisi iure odio, natus beatae doloribus minus!</p>
+  </div>
+</div>
+
+<section id="kalkulator">
+  <h1 class="title">Kalkulator</h1>
+  <div class="calc">
+    <label for="liczba1">Liczba 1</label>
+    <input type="text" id="liczba1">
+    <br>
+    <label for="liczba2">Liczba 2</label>
+    <input type="text" id="liczba2">
+    <br>
+    <label for="dzialanie">Działanie</label>
+    <button value="plus" onclick="pokaz('suma')">+</button>
+    <button value="plus" onclick="pokaz('odej')">-</button>
+    <button value="plus" onclick="pokaz('mnoz')">*</button>
+    <button value="plus" onclick="pokaz('dziel')">/</button>
+    <br>
+    <label for="">Wynik</label>
+    <div id="pokaz3"></div>
+    <div class="blad"></div>
+  </div>
+</section>
+ 
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+  
+<script src="js/main.js"></script>    
+</body>
+</html>
