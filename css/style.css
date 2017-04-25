@@ -269,3 +269,24 @@ body {
   text-align: center;
   padding: 30px;
 }
+#auto {
+  text-align: center;
+}
+#auto h2 {
+  padding: 20px 0;
+}
+#auto button {
+  padding: 5px 10px;
+  background: linear-gradient(#f2bebe, #6d76de, #e2e28c);
+  color: white;
+  border: none;
+  margin: 20px 0;
+}
+#auto button:hover {
+  background: #74c157;
+}
+#auto canvas {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
