@@ -119,3 +119,21 @@ function pokaz(dzial) {
 
   document.getElementById('pokaz3').innerHTML = wynik;
 }
+
+//----------------------zakręć --------------------------
+
+  $('#randomButton').click(function(){
+    $('.circle').toggleClass('change');
+//    $('#randomNumber').html('nowy tekst');
+  });
+
+
+
+var randomButtom = document.getElementById('randomButton');
+var randomNumber = document.getElementById('randomNumber');
+randomButtom.addEventListener("click",losowanieLiczby);
+
+function losowanieLiczby(){
+  var liczba = Math.floor(Math.random()*11);
+  randomNumber.textContent = 'Twoja szczęśliwa liczba to: \n'+  liczba;
+};
