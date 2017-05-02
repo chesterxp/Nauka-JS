@@ -137,3 +137,16 @@ function losowanieLiczby(){
   var liczba = Math.floor(Math.random()*11);
   randomNumber.textContent = 'Twoja szczęśliwa liczba to: \n'+  liczba;
 };
+
+
+//----------------activeForm-----
+
+var nameInput = document.getElementById('nameInput');
+var ageInput = document.getElementById('ageInput');
+var cityInput = document.getElementById('cityInput');
+
+var textName = document.getElementById('textName');
+
+inputName.addEventListener('keyup',function(){
+  textName.textContent = inputName.value;
+});

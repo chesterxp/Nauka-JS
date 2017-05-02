@@ -378,3 +378,12 @@ body {
 #card .flip-card:hover::before {
   transform: rotate(360deg);
 }
+#activeForm {
+  width: 20%;
+  margin: 0 auto;
+  padding: 30px;
+}
+#activeForm label,
+#activeForm input {
+  margin: 10px 0px;
+}
