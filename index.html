@@ -136,22 +136,25 @@
   <div class="flip-card"></div>
 </section>
  
- 
 <section id="activeForm">
+  <h1 class="title">Samouzupełniające się zgłoszenie</h1>
   <form action="">
-
     <input type="text" id="nameInput" placeholder="Podaj imie">
     <input type="text" id="ageInput" placeholder="Podaj wiek">
     <input type="text" id="cityInput" placeholder="Podaj miasto">
-    <select name="course">
-      <option value="HTML/CSS">HTML/CSS</option>
-      <option value="JAVASCRIPT">JAVASCRIPT</option>
+    <select name="course" id="courseInput">
+      <option value="HTML/CSS"   >HTML/CSS</option>
+      <option value="JAVASCRIPT" selected >JAVASCRIPT</option>
       <option value="PHP">PHP</option>
       <option value="MySQL">MySQL</option>
-  </select>
+    </select>
   </form>
-  <div id="">Witam. Nazywam się <span id="textName">Jan</span> i mam <span id="textAge">30</span> lat. Moje miasto to: <span id="textCity">Warszawa</span> i jestem zainteresowany ofertą! </div>
+  <div id="message">
+    <p> Witam. Nazywam się <span id="textName">Jan</span> i mam <span id="textAge">30</span> lat. Moje miasto to: <span id="textCity">Warszawa</span>. <br> Jestem zainteresowany kursem: <span id="textOffer"></span> </p>
+  </div>
+  <button>Wyślij</button>
 </section>
+
 <script
   src="https://code.jquery.com/jquery-2.2.4.min.js"
   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="

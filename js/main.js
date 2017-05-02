@@ -144,9 +144,28 @@ function losowanieLiczby(){
 var nameInput = document.getElementById('nameInput');
 var ageInput = document.getElementById('ageInput');
 var cityInput = document.getElementById('cityInput');
+var courseInput = document.getElementById('courseInput');
 
 var textName = document.getElementById('textName');
+var textAge = document.getElementById('textAge');
+var textCity = document.getElementById('textCity');
+var textOffer = document.getElementById('textOffer');
 
-inputName.addEventListener('keyup',function(){
-  textName.textContent = inputName.value;
+nameInput.addEventListener('keyup',function(){
+  textName.textContent = nameInput.value;
 });
+
+ageInput.addEventListener('keyup',function(){
+  textAge.textContent = ageInput.value;
+});
+
+cityInput.addEventListener('keyup',function(){
+  textCity.textContent = cityInput.value;
+});
+
+textOffer.textContent = courseInput.value;
+
+courseInput.addEventListener('change',function(){
+  textOffer.textContent = courseInput.value;
+});
+

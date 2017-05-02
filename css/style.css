@@ -379,11 +379,37 @@ body {
   transform: rotate(360deg);
 }
 #activeForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 20%;
   margin: 0 auto;
   padding: 30px;
 }
 #activeForm label,
-#activeForm input {
-  margin: 10px 0px;
+#activeForm input,
+#activeForm select {
+  display: block;
+  margin: 20px auto;
+}
+#activeForm #message p {
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 1em;
+  background: black;
+  color: white;
+}
+#activeForm button {
+  width: 50%;
+  margin: 20px auto;
+  background: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+#activeForm button:hover {
+  background: white;
+  border: 1px solid black;
+  color: black;
 }
