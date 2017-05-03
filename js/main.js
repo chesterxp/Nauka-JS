@@ -171,7 +171,38 @@ courseInput.addEventListener('change',function(){
 
 //----------------------Gallery--------------------------
 
+//pokza zdjęć i podpisów
+
 $('.box img').click(function(){
   var http = $(this).attr('src');
+  var title = $(this).attr('alt');
   $('#showPicture img').attr('src',http);
+  $('#title').text(title);
 });
+
+//poza opisu obrazka
+
+$('.box img').mouseover(function(){
+  var title = $(this).attr('alt');
+  $('#title2').text(title);
+  $('#title2').show();
+}).mouseout(function(){
+  $('#title2').hide();
+}).mousemove(function(e){
+  $('#title2').css('left', e.pageX+10);
+  $('#title2').css('top', e.pageY+10);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+

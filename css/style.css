@@ -443,3 +443,16 @@ body {
   width: 50%;
   height: 100%;
 }
+#gallery #title {
+  text-align: center;
+  color: white;
+  padding-bottom: 20px;
+}
+#gallery #title2 {
+  color: white;
+  display: none;
+  position: absolute;
+  padding: 10px 20px;
+  background: black;
+  border-radius: 5px;
+}
