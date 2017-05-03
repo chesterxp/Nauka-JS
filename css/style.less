@@ -58,7 +58,7 @@ table {
 
 body{
   font-size: 20px;
-  
+  background: black;
 }
 ///----------------Additional classes------------------//
 .title {
@@ -287,15 +287,17 @@ body{
     border-radius: 5px;
     background: #f84165;
     color: white;
-    border: 1px solid white;
+    border: 10px solid black;
     margin: 30px auto;
     padding: 10px 20px;
     display: block;
+    box-sizing: border-box;
     
     &:hover{
       background: white;
       color:#f84165;
-      border:1px solid #f84165;
+      border:10px solid #f84165;
+      
     }
   }
 }
@@ -374,6 +376,16 @@ body{
     select {
       display: block;
       margin: 20px auto;
+      padding: 5px 10px;
+      text-align: center;
+      background: #304bbf;
+      color: aliceblue;
+      &:focus{
+        border: 2px solid black;
+      }
+      &::placeholder{
+        color: aliceblue;
+      }
     }
   }
   #message {
@@ -420,7 +432,7 @@ body{
     
     img{
       border: 10px solid white;
-      width: 50%;
+      width: 70%;
       height: 100%;
     }
   }
@@ -436,5 +448,40 @@ body{
     padding: 10px 20px;
     background: black;
     border-radius: 5px;
+  }
+}
+///----------------movieReview------------------//
+#movieReview {
+  display: flex;
+  background: black;
+  #leftBar {
+    display: inline-block;
+    text-align: center;
+    #lista {
+      li {
+        padding: 10px 20px;
+        background: black;
+        color: white;
+        &:hover {
+          background: white;
+          color: black;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  #main {
+    background: #5268de;
+    color: white;
+    text-align: center;
+    width: 70%;
+    display: inline-block;
+    margin: 0 auto;
+    .review {
+      padding: 20px 20px;
+      h1 {
+        padding: 10px 0;
+      }
+    }
   }
 }

@@ -134,7 +134,7 @@ var randomNumber = document.getElementById('randomNumber');
 randomButtom.addEventListener("click",losowanieLiczby);
 
 function losowanieLiczby(){
-  var liczba = Math.floor(Math.random()*11);
+  var liczba = Math.floor(Math.random()*10)+1;
   randomNumber.textContent = 'Twoja szczęśliwa liczba to: \n'+  liczba;
 };
 
@@ -171,7 +171,7 @@ courseInput.addEventListener('change',function(){
 
 //----------------------Gallery--------------------------
 
-//pokza zdjęć i podpisów
+//pokazanie zdjęć i podpisów
 
 $('.box img').click(function(){
   var http = $(this).attr('src');
@@ -180,18 +180,50 @@ $('.box img').click(function(){
   $('#title').text(title);
 });
 
-//poza opisu obrazka
+//pokazanie samego opisu obrazka
 
-$('.box img').mouseover(function(){
+$('.box img')
+  .mouseover(function(){
   var title = $(this).attr('alt');
   $('#title2').text(title);
   $('#title2').show();
-}).mouseout(function(){
+})
+  .mouseout(function(){
   $('#title2').hide();
-}).mousemove(function(e){
+})
+  .mousemove(function(e){
   $('#title2').css('left', e.pageX+10);
   $('#title2').css('top', e.pageY+10);
 });
+
+
+$('.polee').mouseover(function(){
+  $(this).css('background',$('#testy p').css('color'));
+}).mouseout(function(){
+  $(this).css('background','green');
+})
+
+
+
+//-------------movieReview--------------------
+  $('.review').hide();
+  $('#review1').show();
+  $('#link1').click(function () {
+    $('.review').hide();
+    $('#review1').show();
+  });
+  $('#link2').click(function () {
+    $('.review').hide();
+    $('#review2').show();
+  });
+  $('#link3').click(function () {
+    $('.review').hide();
+    $('#review3').show();
+  });
+  $('#link4').click(function () {
+    $('.review').hide();
+    $('#review4').show();
+  });
 
 
 

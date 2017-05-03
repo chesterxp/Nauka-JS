@@ -129,6 +129,7 @@ table {
 }
 body {
   font-size: 20px;
+  background: black;
 }
 .title {
   padding: 10px 20px;
@@ -328,15 +329,16 @@ body {
   border-radius: 5px;
   background: #f84165;
   color: white;
-  border: 1px solid white;
+  border: 10px solid black;
   margin: 30px auto;
   padding: 10px 20px;
   display: block;
+  box-sizing: border-box;
 }
 #circle button:hover {
   background: white;
   color: #f84165;
-  border: 1px solid #f84165;
+  border: 10px solid #f84165;
 }
 #card {
   display: flex;
@@ -396,6 +398,20 @@ body {
 #activeForm form select {
   display: block;
   margin: 20px auto;
+  padding: 5px 10px;
+  text-align: center;
+  background: #304bbf;
+  color: aliceblue;
+}
+#activeForm form label:focus,
+#activeForm form input:focus,
+#activeForm form select:focus {
+  border: 2px solid black;
+}
+#activeForm form label::placeholder,
+#activeForm form input::placeholder,
+#activeForm form select::placeholder {
+  color: aliceblue;
 }
 #activeForm #message {
   margin: 0 auto;
@@ -440,7 +456,7 @@ body {
 }
 #gallery #showPicture img {
   border: 10px solid white;
-  width: 50%;
+  width: 70%;
   height: 100%;
 }
 #gallery #title {
@@ -455,4 +471,36 @@ body {
   padding: 10px 20px;
   background: black;
   border-radius: 5px;
+}
+#movieReview {
+  display: flex;
+  background: black;
+}
+#movieReview #leftBar {
+  display: inline-block;
+  text-align: center;
+}
+#movieReview #leftBar #lista li {
+  padding: 10px 20px;
+  background: black;
+  color: white;
+}
+#movieReview #leftBar #lista li:hover {
+  background: white;
+  color: black;
+  cursor: pointer;
+}
+#movieReview #main {
+  background: #5268de;
+  color: white;
+  text-align: center;
+  width: 70%;
+  display: inline-block;
+  margin: 0 auto;
+}
+#movieReview #main .review {
+  padding: 20px 20px;
+}
+#movieReview #main .review h1 {
+  padding: 10px 0;
 }
