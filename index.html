@@ -10,11 +10,6 @@
 <body onload="odliczanie()">
 
 
-<!-----------------------header------------------------->
-<header>
-  
-</header>
-<!-----------------------//header----------------------->
 
 <!-----------------------box1------------------------->
 <section id="flex">
@@ -119,7 +114,7 @@
   <canvas data-processing-sources="/js/sun2.js"></canvas>
 </div>
 
-<section id="loader">
+<section id="circle">
  <h1 class="title">Zakręć kołem</h1>
   <button id="randomButton">Zakręć</button>
   <div class="circle">
@@ -131,9 +126,9 @@
 <h1 class="title">Odkręć kartę</h1>
 <section id="card">
  
-  <div class="flip-card"></div>
-  <div class="flip-card"></div>
-  <div class="flip-card"></div>
+  <div class="flip-card bg1"></div>
+  <div class="flip-card bg2"></div>
+  <div class="flip-card bg3"></div>
 </section>
  
 <section id="activeForm">
@@ -151,9 +146,36 @@
   </form>
   <div id="message">
     <p> Witam. Nazywam się <span id="textName">Jan</span> i mam <span id="textAge">30</span> lat. Moje miasto to: <span id="textCity">Warszawa</span>. <br> Jestem zainteresowany kursem: <span id="textOffer"></span> </p>
+      <button>Wyślij</button>
   </div>
-  <button>Wyślij</button>
+
 </section>
+
+<section id="gallery">
+  <h1 class="title">Galeria</h1>
+  <div class="box">
+    <img src="/images/cars/auto1.jpg" alt="">
+    <img src="/images/cars/auto2.jpg" alt="">
+    <img src="/images/cars/auto3.jpg" alt="">
+    <img src="/images/cars/auto4.jpg" alt="">
+    <img src="/images/cars/auto5.jpg" alt="">
+    <img src="/images/cars/auto6.jpg" alt="">
+    <img src="/images/cars/auto7.jpg" alt="">
+    <img src="/images/cars/auto8.jpg" alt="">
+    <img src="/images/cars/auto9.jpg" alt="">
+    <img src="/images/cars/auto10.jpg" alt="">
+    <img src="/images/cars/auto11.jpg" alt="">
+    <img src="/images/cars/auto12.jpg" alt="">
+    <img src="/images/cars/auto13.jpg" alt="">
+    <img src="/images/cars/auto14.jpg" alt="">
+    <img src="/images/cars/auto15.jpg" alt="">
+  </div>
+  
+  <div id="showPicture">
+    <img src="/images/cars/auto1.jpg" alt="">
+  </div>
+</section>
+
 
 <script
   src="https://code.jquery.com/jquery-2.2.4.min.js"

@@ -169,3 +169,9 @@ courseInput.addEventListener('change',function(){
   textOffer.textContent = courseInput.value;
 });
 
+//----------------------Gallery--------------------------
+
+$('.box img').click(function(){
+  var http = $(this).attr('src');
+  $('#showPicture img').attr('src',http);
+});

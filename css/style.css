@@ -131,7 +131,7 @@ body {
   font-size: 20px;
 }
 .title {
-  padding: 10px 0px;
+  padding: 10px 20px;
   background: #1b5a7a;
   color: white;
   letter-spacing: 2px;
@@ -290,7 +290,7 @@ body {
   margin: 0 auto;
   width: 100%;
 }
-#loader .circle {
+#circle .circle {
   width: 40vh;
   height: 40vh;
   background-color: #497fc9;
@@ -306,13 +306,13 @@ body {
   align-items: center;
   font-size: 6px;
 }
-#loader .circle #randomNumber {
+#circle .circle #randomNumber {
   font-size: 40px;
   transition: all 2.8s ease;
   text-align: center;
   padding: 20px;
 }
-#loader .change {
+#circle .change {
   transform: rotate(3600deg);
   border-top: 80px solid #3dff71;
   border-left: 80px solid #f81c25;
@@ -320,10 +320,10 @@ body {
   border-bottom: 80px solid #01b3f5;
   background: #efcfca;
 }
-#loader .change #randomNumber {
+#circle .change #randomNumber {
   transition: all 2.8s ease;
 }
-#loader button {
+#circle button {
   width: auto;
   border-radius: 5px;
   background: #f84165;
@@ -333,7 +333,7 @@ body {
   padding: 10px 20px;
   display: block;
 }
-#loader button:hover {
+#circle button:hover {
   background: white;
   color: #f84165;
   border: 1px solid #f84165;
@@ -371,36 +371,44 @@ body {
   transform: rotateY(180deg);
 }
 #card .flip-card::before {
-  background: url(/images/auto2.jpg) no-repeat;
+  background: url(/images/cars/auto1.jpg) no-repeat;
   background-size: cover;
   transform: rotateY(180deg);
 }
 #card .flip-card:hover::before {
   transform: rotate(360deg);
 }
-#activeForm {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+#card .bg2::before {
+  background: url(/images/cars/auto4.jpg) no-repeat;
+  background-size: cover;
+}
+#card .bg3::before {
+  background: url(/images/cars/auto6.jpg) no-repeat;
+  background-size: cover;
+}
+#activeForm form {
   width: 20%;
   margin: 0 auto;
   padding: 30px;
 }
-#activeForm label,
-#activeForm input,
-#activeForm select {
+#activeForm form label,
+#activeForm form input,
+#activeForm form select {
   display: block;
   margin: 20px auto;
 }
-#activeForm #message p {
+#activeForm #message {
+  margin: 0 auto;
   text-align: center;
+}
+#activeForm #message p {
   padding: 30px 20px;
   font-size: 1em;
   background: black;
   color: white;
 }
-#activeForm button {
-  width: 50%;
+#activeForm #message button {
+  width: 20%;
   margin: 20px auto;
   background: black;
   color: white;
@@ -408,8 +416,30 @@ body {
   padding: 10px 20px;
   border-radius: 5px;
 }
-#activeForm button:hover {
+#activeForm #message button:hover {
   background: white;
   border: 1px solid black;
   color: black;
+}
+#gallery {
+  background: black;
+}
+#gallery .box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+#gallery .box img {
+  width: 12%;
+  height: 100%;
+}
+#gallery #showPicture {
+  text-align: center;
+  margin: 10px 0;
+}
+#gallery #showPicture img {
+  border: 10px solid white;
+  width: 50%;
+  height: 100%;
 }
