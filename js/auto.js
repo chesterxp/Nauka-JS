@@ -17,8 +17,6 @@ $('#speed5').click(function(){
   y = 50;
 });
 
-console.log(y);
-
 var $widthAuto = $('#auto').width();
 draw = function(){
   

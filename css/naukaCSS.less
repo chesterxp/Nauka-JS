@@ -49,68 +49,7 @@ table {
 
 
 //--------------------------------//Reset CSS -----------------------------------------------------//
-body{
-  transition: background 0.5s;
-}
 
-body::after{
-  content: "";
-  position: fixed;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  z-index: -10;
-  
-}
-
-.modal-open {
-  background: rgb(0, 58, 250);
-  #modal1 {
-    .modal {
-      opacity: 1;
-      z-index: 100;
-    }
-  }
-}
-
-#modal1 {
-  display: flex;
-  justify-content: center;
-  h2{
-    padding: 10px 0;
-    text-align: center;
-  }
-  .modal {
-    position: fixed;
-    background: #4559c9;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 0.5s;
-    box-shadow: 0 0 30px black;
-    border-radius: 5px;
-    .x{
-      position: relative;
-      top: 20px;
-      right:-120px;
-      &:hover{
-        color: aliceblue;
-        cursor: pointer;
-      } 
-    }
-    form {
-      padding: 10px 20px;
-      label {
-        display: block;
-        padding: 10px;
-      }
-      button {
-        display: block;
-        margin: 10px auto;
-      }
-    }
-  }
-}
 
 
 

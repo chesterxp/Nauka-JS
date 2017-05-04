@@ -17,6 +17,8 @@ $(document).ready(function(){
 //--------------------Stoper --------------------------//
 var czas = 0
 var timee = 0;
+var klik =0;
+var startKlik =0;
 var odliczanieStopera = function () {
   var sekunda = document.getElementById('seconds');
   var opis = "";
@@ -32,15 +34,51 @@ var odliczanieStopera = function () {
   }
   sekunda.innerHTML = czas + opis;
   timee = setTimeout("odliczanieStopera()", 1000);
+//  start.removeEventListener('click', odliczanieStopera);
+  
 }
 
 var stopStopera = function () {
   clearTimeout(timee);
 };
+
+function resetStoper (){
+//  var czas = 0
+  var timee = 0;
+  odliczanieStopera();
+  
+};
 var start = document.getElementById('startButton');
-start.addEventListener('click', odliczanieStopera);
+start.addEventListener('click', function(){
+  startKlik+=1;
+  if(startKlik==1){
+    odliczanieStopera();
+  }
+});
+
 var stop = document.getElementById('stopButton');
-stop.addEventListener('click', stopStopera);
+stop.addEventListener('click', function(){
+  klik=0;
+  stopStopera();
+});
+
+var resume = document.getElementById('resumeButton');
+//resume.addEventListener('click', resetStoper);
+resume.addEventListener('click', function(){
+  klik+=1;
+  if(klik==1){
+    odliczanieStopera();
+  }
+});
+
+var reset = document.getElementById('resetButton');
+reset.addEventListener('click',function(e){
+  czas = 0;
+  stopStopera();
+  var sekunda = document.getElementById('seconds');
+  sekunda.textContent = '0 sekund';
+  startKlik = 0;
+})
 
 
 //------------------------Audio---------------------------//
@@ -63,6 +101,7 @@ function odliczanie() {
 	var dzisiaj = new Date();
 
 	var dzien = dzisiaj.getDate();
+     if (dzien < 10) dzien = "0" + dzien;
 	var miesiac = dzisiaj.getMonth() + 1;
 	if (miesiac < 10) miesiac = "0" + miesiac;
 	var rok = dzisiaj.getFullYear();

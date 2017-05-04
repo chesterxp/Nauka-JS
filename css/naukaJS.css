@@ -233,6 +233,7 @@ body {
   top: 0px;
   right: 0px;
   border: none;
+  z-index: 100;
 }
 .faq {
   display: flex;
@@ -267,10 +268,10 @@ body {
 }
 .faq .open,
 .faq .open2 {
-  background: url(/images/open.png) no-repeat 0px 10px;
+  background: url("images/open.png") no-repeat 0px 10px;
 }
 .faq .close {
-  background: url(/images/close.png) no-repeat 1px 10px;
+  background: url(images/close.png) no-repeat 1px 10px;
 }
 #kalkulator .calc {
   background: #1b5a7a;
@@ -387,7 +388,7 @@ body {
   transform: rotateY(180deg);
 }
 #card .flip-card::before {
-  background: url(/images/cars/auto1.jpg) no-repeat;
+  background: url("images/cars/auto1.jpg") no-repeat;
   background-size: cover;
   transform: rotateY(180deg);
 }
@@ -395,11 +396,11 @@ body {
   transform: rotate(360deg);
 }
 #card .bg2::before {
-  background: url(/images/cars/auto4.jpg) no-repeat;
+  background: url("/images/cars/auto4.jpg") no-repeat;
   background-size: cover;
 }
 #card .bg3::before {
-  background: url(/images/cars/auto6.jpg) no-repeat;
+  background-image: url(images/cars/auto6.jpg) no-repeat;
   background-size: cover;
 }
 #activeForm form {
@@ -586,7 +587,7 @@ body {
   background: #5268de;
   color: white;
   text-align: center;
-  width: 70%;
+  width: 80%;
   display: inline-block;
   margin: 0 auto;
 }

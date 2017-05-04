@@ -10,6 +10,7 @@ $('#sun2').click(function(){
 var sunRadius = 100;
 var x = 0;
 var y = $maxWidth;
+
 size($maxWidth,350);
 noStroke();
 
