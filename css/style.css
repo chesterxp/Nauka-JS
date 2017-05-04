@@ -128,7 +128,7 @@ table {
   border-spacing: 0;
 }
 body {
-  font-size: 20px;
+  transition: background 0.5s;
   background: black;
 }
 .title {
@@ -139,6 +139,15 @@ body {
   font-size: 1em;
   text-transform: uppercase;
   text-align: center;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.85);
+  opacity: 1;
 }
 #flex {
   background: #a6ed8e;
@@ -270,11 +279,16 @@ body {
   text-align: center;
   padding: 30px;
 }
+#kalkulator .calc input,
+#kalkulator .calc label {
+  margin: 5px 0;
+}
 #auto {
   text-align: center;
 }
 #auto h2 {
   padding: 20px 0;
+  color: white;
 }
 #auto button {
   padding: 5px 10px;
@@ -436,6 +450,84 @@ body {
   background: white;
   border: 1px solid black;
   color: black;
+}
+#modalForm .contectForm {
+  text-align: center;
+  color: white;
+}
+#modalForm .contectForm h2 {
+  padding: 30px 0;
+}
+#modalForm .contectForm span {
+  color: red;
+}
+#modalForm .contectForm button {
+  background: #5257ce;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-bottom: 40px;
+}
+#modalForm .contectForm button:hover {
+  color: #5257ce;
+  background: white;
+  cursor: pointer;
+}
+#modalForm .boxModal h2 {
+  text-align: center;
+  padding-top: 20px;
+}
+#modalForm .boxModal .modal {
+  text-align: center;
+  background: #3c4dcb;
+  display: inline-block;
+  margin: 15% 40%;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #ffffff;
+  color: white;
+  font-size: 0.9em;
+  opacity: 0;
+  z-index: 100;
+  position: absolute;
+  transition: all 0.5s ease;
+}
+#modalForm .boxModal .modal form {
+  display: inline-block;
+  margin: 0 auto;
+}
+#modalForm .boxModal .modal form input {
+  display: block;
+  padding: 5px 0;
+  margin: 20px;
+  text-align: center;
+}
+#modalForm .boxModal .modal form input:focus {
+  background: #3c4dcb;
+  color: white;
+}
+#modalForm .boxModal .modal form textarea {
+  text-align: center;
+}
+#modalForm .boxModal .modal form textarea:focus {
+  background: #3c4dcb;
+  color: white;
+}
+#modalForm .boxModal .modal form button {
+  display: block;
+  margin: 10px auto;
+}
+#modalForm .boxModal .modal .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: inline-block;
+  font-size: 1.5em;
+}
+#modalForm .boxModal .modal .close:hover {
+  color: black;
+  cursor: pointer;
 }
 #gallery {
   background: black;

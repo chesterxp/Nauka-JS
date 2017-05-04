@@ -57,9 +57,10 @@ table {
 @color-white: #F6F5F5;
 
 body{
-  font-size: 20px;
+  transition: background 0.5s;
   background: black;
 }
+
 ///----------------Additional classes------------------//
 .title {
   padding: 10px 20px;
@@ -69,6 +70,15 @@ body{
   font-size: 1em;
   text-transform: uppercase;
   text-align: center;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.85);
+  opacity: 1;
 }
 ///----------------flex------------------//
 #flex {
@@ -216,6 +226,9 @@ body{
     margin: 30px auto;
     text-align: center;
     padding: 30px;
+    input,label{
+      margin: 5px 0;
+    }
   }
 }
 ///----------------auto------------------//
@@ -223,6 +236,7 @@ body{
   text-align: center;
   h2{
     padding: 20px 0;
+    color: white;
   }
   
   button{
@@ -413,6 +427,92 @@ body{
     }
   }
 }
+///----------------modalForm------------------//
+#modalForm {
+  .contectForm {
+    h2{
+      padding: 30px 0;
+    }
+    text-align: center;
+    color: white;
+    span {
+      color: red;
+
+    }
+    button{
+      background: #5257ce;
+      color:white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      margin-bottom: 40px;
+      &:hover {
+        color: #5257ce;
+        background: white;
+        cursor: pointer;
+      }
+    }
+  }
+  .boxModal {
+    h2 {
+      text-align: center;
+      padding-top: 20px;
+    }
+    .modal {
+      text-align: center;
+      background: #3c4dcb;
+      display: inline-block;
+      margin:15% 40%;
+      padding: 10px 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #ffffff;
+      color: white;
+      font-size: 0.9em;
+      opacity: 0;
+      z-index: 100;
+      position: absolute;
+      transition: all 0.5s ease;
+      form {
+        display: inline-block;
+        margin: 0 auto;
+        input {
+          display: block;
+          padding: 5px 0;
+          margin: 20px;
+          text-align: center;
+          &:focus {
+            background: #3c4dcb;
+            color: white;
+          }
+        }
+        textarea {
+          text-align: center;
+          &:focus {
+            background: #3c4dcb;
+            color: white;
+          }
+        }
+        button {
+          display: block;
+          margin: 10px auto;
+        }
+      }
+      .close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        display: inline-block;
+        font-size: 1.5em;
+      
+        &:hover {
+          color: black;
+          cursor: pointer;
+          
+        }
+      }
+    }
+  }
+}
 ///----------------Gallery------------------//
 #gallery{
   background: black;
@@ -485,3 +585,7 @@ body{
     }
   }
 }
+
+
+
+

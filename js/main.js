@@ -116,7 +116,14 @@ function pokaz(dzial) {
     operator = '/';
   };
   wynik = eval(liczba1 + operator + liczba2);
-
+  console.log(wynik);
+  console.log(NaN);
+  if (isNaN(wynik)){
+    wynik = "Nie zostały wprowadzone liczy. Spróbuj jeszcze raz.";
+  }
+  else{
+    
+  }
   document.getElementById('pokaz3').innerHTML = wynik;
 }
 
@@ -226,15 +233,25 @@ $('.polee').mouseover(function(){
   });
 
 
+//----------------------------modalForm---------------------------
 
+$('#contactBtn').click(function(){
+  $('.modal').css('opacity',1);
+  $('.boxModal').addClass('overlay');
+ 
+});
 
+$('#close').click(function(){
+  $('.boxModal').removeClass('overlay');
+  $('.modal').css('opacity',0);
+})
 
-
-
-
-
-
-
+document.addEventListener('keyup',function(e){
+  if(e.keyCode==27){
+    $('.boxModal').removeClass('overlay');
+    $('.modal').css('opacity',0);
+  };
+})
 
 
 

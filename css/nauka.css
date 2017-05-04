@@ -127,34 +127,59 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-#movieReview {
-  display: flex;
+body {
+  transition: background 0.5s;
 }
-#movieReview #leftBar {
-  display: inline-block;
+body::after {
+  content: "";
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -10;
+}
+.modal-open {
+  background: #003afa;
+}
+.modal-open #modal1 .modal {
+  opacity: 1;
+  z-index: 100;
+}
+#modal1 {
+  display: flex;
+  justify-content: center;
+}
+#modal1 h2 {
+  padding: 10px 0;
   text-align: center;
 }
-#movieReview #leftBar #lista li {
-  padding: 10px 20px;
-  background: black;
-  color: white;
+#modal1 .modal {
+  position: fixed;
+  background: #4559c9;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s;
+  box-shadow: 0 0 30px black;
+  border-radius: 5px;
 }
-#movieReview #leftBar #lista li:hover {
-  background: white;
-  color: black;
+#modal1 .modal .x {
+  position: relative;
+  top: 20px;
+  right: -120px;
+}
+#modal1 .modal .x:hover {
+  color: aliceblue;
   cursor: pointer;
 }
-#movieReview #main {
-  background: #5268de;
-  color: white;
-  text-align: center;
-  width: 70%;
-  display: inline-block;
-  margin: 0 auto;
+#modal1 .modal form {
+  padding: 10px 20px;
 }
-#movieReview #main .title {
-  padding: 20px 20px;
+#modal1 .modal form label {
+  display: block;
+  padding: 10px;
 }
-#movieReview #main .title h1 {
-  padding: 10px 0;
+#modal1 .modal form button {
+  display: block;
+  margin: 10px auto;
 }
