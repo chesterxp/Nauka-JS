@@ -127,3 +127,36 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+body {
+  background: #c8c8cb;
+  font-size: 20px;
+}
+.title {
+  text-align: center;
+  color: white;
+  font-size: 1.5em;
+  padding: 20px 0;
+  background: #4362c9;
+  box-shadow: 0 0 10px #9a9a9a;
+}
+#tooltip .toolBox {
+  width: 70%;
+  margin: 0 auto;
+  font-size: 0.9em;
+  line-height: 1.5em;
+  text-align: justify;
+  position: relative;
+}
+#tooltip .toolBox [data-title] {
+  position: relative;
+  color: red;
+}
+#tooltip .toolBox [data-title]:hover::after {
+  content: "";
+  background: black;
+  color: white;
+  position: absolute;
+  top: -35px;
+  left: 0;
+  padding: 5px 10px;
+}
