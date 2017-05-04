@@ -116,6 +116,10 @@ function odliczanie() {
 
 	setTimeout("odliczanie()", 1000);
 }
+window.addEventListener('load',function(){
+  odliczanie();
+})
+
 ///----------------FAQ---------------------
 
   $('.faq .answer').hide();
@@ -292,5 +296,15 @@ document.addEventListener('keyup',function(e){
   };
 })
 
+//-------------------------keyPress----------------
 
+//var letter = document.getElementById('');
 
+document.addEventListener('keyup',function(e){
+  console.log(e);
+  var letter2 = e.key;
+  var letter = e.keyCode;
+  var x = String.fromCharCode(letter);
+  var letterBox = document.getElementById('key');
+  letterBox.textContent = letter2;
+})

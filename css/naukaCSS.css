@@ -140,7 +140,6 @@ body {
   box-shadow: 0 0 10px #9a9a9a;
 }
 #tooltip .toolBox {
-  width: 70%;
   margin: 0 auto;
   font-size: 0.9em;
   line-height: 1.5em;
@@ -150,13 +149,24 @@ body {
 #tooltip .toolBox [data-title] {
   position: relative;
   color: red;
+  text-align: center;
 }
 #tooltip .toolBox [data-title]:hover::after {
-  content: "";
+  content: attr(data-title);
   background: black;
   color: white;
   position: absolute;
-  top: -35px;
+  top: -75px;
   left: 0;
   padding: 5px 10px;
+}
+#tooltip .toolBox [data-title]:hover::before {
+  content: '';
+  border-top: 20px solid black;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  position: absolute;
+  top: -12px;
+  left: 10px;
+  height: 7px;
 }

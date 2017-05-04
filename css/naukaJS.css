@@ -388,7 +388,7 @@ body {
   transform: rotateY(180deg);
 }
 #card .flip-card::before {
-  background: url("images/cars/auto1.jpg") no-repeat;
+  background: url("/images/cars/auto1.jpg") no-repeat;
   background-size: cover;
   transform: rotateY(180deg);
 }
@@ -400,7 +400,7 @@ body {
   background-size: cover;
 }
 #card .bg3::before {
-  background-image: url(images/cars/auto6.jpg) no-repeat;
+  background: url("/images/cars/auto9.jpg") no-repeat;
   background-size: cover;
 }
 #activeForm form {
@@ -441,16 +441,15 @@ body {
 #activeForm #message button {
   width: 20%;
   margin: 20px auto;
-  background: black;
-  color: white;
+  background: white;
+  color: black;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
 }
 #activeForm #message button:hover {
-  background: white;
-  border: 1px solid black;
-  color: black;
+  background: #383737;
+  color: white;
 }
 #modalForm .contectForm {
   text-align: center;
@@ -596,4 +595,21 @@ body {
 }
 #movieReview #main .review h1 {
   padding: 10px 0;
+}
+#keyPress .keyBox {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+#keyPress .keyBox p {
+  padding: 10px 20px;
+  color: white;
+  font-size: 1.5em;
+}
+#keyPress .keyBox #key {
+  padding: 20px;
+  font-size: 40px;
+  background: white;
+  margin: 30px;
 }
