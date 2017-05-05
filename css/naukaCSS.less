@@ -51,7 +51,7 @@ table {
 //--------------------------------//Reset CSS -----------------------------------------------------//
 
 body{
-  background: #c8c8cb;
+  background: #f7f7ff;
   font-size: 20px;
 }
 
@@ -137,11 +137,136 @@ body{
     }
   }
 }
+.consoleBox{
+  display: flex;
+  justify-content: center;
+}
+.console {
+  background: black;
+  width: 300px;
+  height: 200px;
+  border: 3px solid #c0c0c0;
+  padding: 10px;
+  border-top-width: 20px;
+  position: relative;
+  border-radius: 3px;
+  &::before, &::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    border-radius: 50%;
+    top: -15px;
+
+  }
+  &::after {
+    background: #ffa500;
+    left: 15px;
+  }
+  
+  &::before{
+    background: #ff0000;
+    left: 3px;
+  }
+  .typing {
+    color: #34d834;
+    margin: 0;
+  }
+  .typing::before {
+    content: 'user@lukdev.pl : ~';
+    display: block;
+  }
+  .typing::after {
+    content: ' _';
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  @keyframes blink {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+#howManyLetters{
+    
+   
+  .boxHML{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    p,div{
+      padding: 20px 30px;
+      background: #464646;
+      color: white;
+      margin: 10px;
+    }
+    textarea{
+      width: 30%;
+    }
+
+    
+  }
+}
 
 
+#hamburgerButton{
+background: black;
+  
+  #hamburgerButtonBox{
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    
+    .hamburger{
+      width: 40px;
+      height: 35px;
+      border: 0;
+      border-top: 5px solid white;
+      background: transparent;
+      position: relative;
+      transition: all 0.3s linear;
+      
+      
+      &::before, &::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        border-top: 5px solid white;
+        transform: translateY(10px);
+        
+      }
+      &::after{
+        transform: translateY(25px);
+        transition: all 0.3s linear;
+      }
+      
+      &:focus{
+        transform: rotate(45deg) translateY(5px);
+        border: none;
+        outline: 0;
+      }
+      
+      &:focus::after{
+        transform: rotate(-90deg) translateX(-10px);
+      }
+      
+    }
+  }
+}
 
-
-
-
-
-
+#mouseMove{
+  text-align: center;
+  #mouse{
+    padding: 20px;
+    background: #7b7b7b;
+  }
+}
