@@ -268,10 +268,10 @@ body {
 }
 .faq .open,
 .faq .open2 {
-  background: url("images/open.png") no-repeat 0px 10px;
+  background: url(/images/close.png) no-repeat 0px 10px;
 }
 .faq .close {
-  background: url(images/close.png) no-repeat 1px 10px;
+  background: url(/images/close.png) no-repeat 1px 10px;
 }
 #kalkulator .calc {
   background: #1b5a7a;
@@ -612,4 +612,62 @@ body {
   font-size: 40px;
   background: white;
   margin: 30px;
+}
+#analogClock {
+  background: green;
+}
+.analogClockBox {
+  display: flex;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+}
+.analogClockBox .clock {
+  width: 101px;
+  height: 101px;
+  border: 1px solid #000000;
+  background: #ffffff;
+  border-radius: 50%;
+  transform: rotate(180deg) scale(2);
+}
+.analogClockBox .clock .hours {
+  border: 3px solid black;
+  position: absolute;
+  height: 30%;
+  border-radius: 2px;
+  left: 48px;
+  top: 50px;
+  animation-duration: 43200s;
+}
+.analogClockBox .clock .minutes {
+  border: 1px solid black;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  height: 45%;
+  animation-duration: 3600s;
+}
+.analogClockBox .clock .seconds {
+  border: 1px solid red;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  height: 45%;
+  animation-duration: 60s;
+}
+.analogClockBox .clock .animate {
+  animation-name: rotate;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.analogClockBox .clock .hand {
+  transform-origin: top center;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

@@ -167,6 +167,41 @@ body {
   border-right: 20px solid transparent;
   position: absolute;
   top: -12px;
-  left: 10px;
+  left: 30%;
   height: 7px;
+}
+.corridorBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+.corridorBox .doors {
+  width: 10px;
+  height: 10px;
+  background: brown;
+  position: relative;
+  border-left: 40px solid black;
+  border-right: 40px solid black;
+  border-top: 3px solid grey;
+  border-bottom: 70px solid red;
+  transform: scale(2);
+}
+.corridorBox .doors::after {
+  content: "";
+  background: gold;
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 7px;
+  left: 7px;
+}
+.corridorBox .doors::before {
+  content: "";
+  background: aqua;
+  width: 6px;
+  height: 3px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
 }
