@@ -116,9 +116,9 @@ function odliczanie() {
 
 	setTimeout("odliczanie()", 1000);
 }
-//window.addEventListener('load',function(){
+
   odliczanie();
-//})
+
 
 ///----------------FAQ---------------------
 
@@ -301,7 +301,6 @@ document.addEventListener('keyup',function(e){
 //var letter = document.getElementById('');
 
 document.addEventListener('keyup',function(e){
-  console.log(e);
   var letter2 = e.key;
   var letter = e.keyCode;
   var x = String.fromCharCode(letter);

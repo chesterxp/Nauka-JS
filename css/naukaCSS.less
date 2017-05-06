@@ -53,17 +53,19 @@ table {
 body{
   background: #f7f7ff;
   font-size: 20px;
+  font-family: 'Lato', sans-serif;
 }
+//-------------------other class------------------
+.title {
+    text-align: center;
+    color: white;
+    font-size: 1.5em;
+    padding: 20px 0;
+    background: #4362c9;
+    box-shadow: 0 0 10px #9a9a9a;
+  }
 
-.title{
-  text-align: center;
-  color: white;
-  font-size: 1.5em;
-  padding: 20px 0;
-  background: #4362c9;
-  box-shadow: 0 0 10px #9a9a9a;
-}
-
+//----------------------tooltips-------------------
 #tooltip {
   .toolBox {
     
@@ -100,22 +102,22 @@ body{
     
   }
 }
-
+//----------------------corridorBox-------------------
 .corridorBox{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 200px;
+  height: 300px;
   .doors{
     width: 10px;
     height: 10px;
     background: brown;
     position: relative;
-    border-left: 40px solid black;
-    border-right: 40px solid black;
-    border-top: 3px solid grey;
+    border-left: 40px solid #837d7d;
+    border-right: 40px solid #837d7d;
+    border-top: 3px solid #c1bfbf;
     border-bottom: 70px solid red;
-    transform: scale(2);
+    transform: scale(3);
     &::after{
       content: "";
       background: gold;
@@ -137,10 +139,23 @@ body{
     }
   }
 }
+//----------------------consoleBox-------------------
 .consoleBox{
   display: flex;
   justify-content: center;
-}
+  flex-direction: column;
+  align-items: center;
+  
+  h3{
+      padding: 20px 30px;
+      background: #464646;
+      color: white;
+      margin: 10px;
+  }
+  textarea{
+    margin: 20xp 0;
+  }
+
 .console {
   background: black;
   width: 300px;
@@ -150,6 +165,8 @@ body{
   border-top-width: 20px;
   position: relative;
   border-radius: 3px;
+  text-align: center;
+  margin-top: 10px;
   &::before, &::after {
     content: "";
     width: 10px;
@@ -171,6 +188,7 @@ body{
   .typing {
     color: #34d834;
     margin: 0;
+
   }
   .typing::before {
     content: 'user@lukdev.pl : ~';
@@ -183,6 +201,11 @@ body{
     animation-iteration-count: infinite;
     animation-timing-function: linear;
   }
+  
+  p{
+    display: flex;
+    flex-wrap: wrap;
+  }
   @keyframes blink {
     from {
       opacity: 0;
@@ -192,11 +215,10 @@ body{
     }
   }
 }
-
+}
+//----------------------howManyLetters-------------------
 #howManyLetters{
-    
-   
-  .boxHML{
+    .boxHML{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -214,8 +236,7 @@ body{
     
   }
 }
-
-
+//----------------------hamburgerButton-------------------
 #hamburgerButton{
 background: black;
   
@@ -262,7 +283,7 @@ background: black;
     }
   }
 }
-
+//----------------------mouseMove-------------------
 #mouseMove{
   text-align: center;
   #mouse{

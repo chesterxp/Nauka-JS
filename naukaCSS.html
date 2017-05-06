@@ -3,13 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="keywords" content="Nauka CSS, CSS" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,900&amp;subset=latin-ext" rel="stylesheet">
   <link rel="stylesheet" href="css/naukaCSS.css">
 </head>
 <body>
 
 <section id="tooltip">
-  <h1 class="title">Tooltip w CSS</h1>
+  <h1 class="title">Tooltip tylko w CSS</h1>
   <div class="toolBox">
     <p>Lorem ipsum <span data-title="przykładowy tooltip">Kliknij na mnie! </span>dolor sit amet, consectetur adipisicing elit. Exercitationem blanditiis vero necessitatibus. Et <span data-title="przykładowy tooltip">Kliknij na mnie! </span>illo vero nisi fugit similique amet excepturi.</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit voluptates error iure quibusdam quisquam ipsa amet pariatur nobis voluptatibus quo <span data-title="przykładowy tooltip">Kliknij na mnie! </span>soluta, sint, quia quaerat! Aut modi inventore, similique nam quibusdam corrupti harum, quidem ad nisi esse! Eum minus officia, atque at esse obcaecati reiciendis dignissimos veniam vero temporibus mollitia ad, nobis quos aut optio facilis deserunt laborum. Delectus corporis enim quos iste asperiores quis, aut sequi natus quasi maxime laboriosam! Optio assumenda, provident <span data-title="przykładowy tooltip">Kliknij na mnie! </span>excepturi! Similique consequuntur illo, facere quos aperiam, vero iusto exercitationem debitis, necessitatibus illum mollitia quasi fugit quo voluptatibus culpa? Neque ad quaerat a delectus, eaque modi assumenda.</p>
@@ -17,7 +20,7 @@
 </section>
 
 <section id="corridor">
-  <h1 class="title">Korytarz w CSS</h1>
+  <h1 class="title">Korytarz</h1>
   <div class="corridorBox">
     <div class="doors"></div>
   </div>
@@ -25,10 +28,17 @@
 </section>
 
 <section id="console">
- <h1 class="title">Consola w CSS</h1>
+  <h1 class="title">Consola</h1>
+  
   <div class="consoleBox">
+    <h3> Napsiz coś od siebie</h3>
+    <textarea name="" id="wprowadz" cols="30" rows="4" placeholder="Napisz coś aby zobaczyć efekt"></textarea>
     <div class="console">
-      <pre class="typing">$</pre>
+      <p class="typing">$<span id="zdanie"> </span></p>
+    </div>
+    <button id="writeSomething">Teraz ja</button>
+    <div class="console">
+      <p class="typing" id="typing2">$</p>
     </div>
   </div>
 </section>

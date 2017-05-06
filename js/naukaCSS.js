@@ -1,3 +1,38 @@
+//-----------------console--------------------------
+//------console 1
+var wprowadz = document.getElementById('wprowadz');
+var zdanie = document.getElementById('zdanie');
+
+wprowadz.addEventListener('keyup',function(){
+  var letter = wprowadz.value;
+  zdanie.textContent = letter;
+});
+
+//------console 2
+var typing = document.querySelector('#typing2');
+var text = "";
+var startTyping = function (){
+  typing.textContent = "$";
+  text = wprowadz.value;
+  var currentIndex = 0;
+  if (text===""){
+    text = "Skoro nic nie wpisałeś ww. polu to sam  coś wpisze. Witam na mojej stronie z ćwiczeniami CSS oraz JS!!! Have fun!!!"
+  }
+  var interval = setInterval(function(){
+    if (text.length>currentIndex){
+    typing.textContent+=text[currentIndex];
+    currentIndex+=1;
+  } 
+    else{
+      clearInterval(interval);
+    }
+  },50 + Math.random()*50)
+};
+
+var writeSomething = document.getElementById('writeSomething');
+writeSomething.addEventListener('click',startTyping)
+
+///-------------howManyLetters-------------------------
 var input = document.querySelector('#customInput');
 var charCount = document.querySelector('#charCount');
 var onKeyDown = function(){

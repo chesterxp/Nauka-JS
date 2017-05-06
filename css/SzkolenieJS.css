@@ -130,6 +130,7 @@ table {
 body {
   transition: background 0.5s;
   background: black;
+  font-family: 'Lato', sans-serif;
 }
 .title {
   padding: 10px 20px;
@@ -171,7 +172,7 @@ body {
   width: 80%;
   display: flex;
   margin: 0 auto;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
   align-content: flex-start;
 }
@@ -179,7 +180,7 @@ body {
   width: 100px;
   height: 100px;
   background: green;
-  font-size: 90px;
+  font-size: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -241,18 +242,19 @@ body {
   flex-direction: column;
 }
 .faq h3 {
-  padding: 10px 0;
+  padding: 10px 20px;
   background: #d4d0d0;
   text-align: center;
   width: 55%;
   margin: 0 auto;
 }
 .faq .box {
-  padding: 30px 0;
+  padding: 30px 20px;
   background: #3d5e91;
   color: white;
   width: 55%;
   margin: 0 auto;
+  text-align: center;
 }
 .faq .box h2 {
   padding: 10px 0 0 25px;
@@ -268,7 +270,7 @@ body {
 }
 .faq .open,
 .faq .open2 {
-  background: url(/images/close.png) no-repeat 0px 10px;
+  background: url(/images/open.png) no-repeat 0px 10px;
 }
 .faq .close {
   background: url(/images/close.png) no-repeat 1px 10px;
@@ -586,15 +588,15 @@ body {
   background: #5268de;
   color: white;
   text-align: center;
-  width: 80%;
   display: inline-block;
   margin: 0 auto;
+  line-height: 24px;
 }
 #movieReview #main .review {
   padding: 20px 20px;
 }
 #movieReview #main .review h1 {
-  padding: 10px 0;
+  padding-bottom: 10px;
 }
 #keyPress .keyBox {
   display: flex;
