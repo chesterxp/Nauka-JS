@@ -12,7 +12,7 @@
 
 
 
-<!-----------------------box1------------------------->
+<!------------------------------------flex--------------------------------->
 <section id="flex">
   <h1 class="title">Cwiczenia z flex + JQuery</h1>
   
@@ -46,8 +46,7 @@
     
   </div>
 </section>
-<!-----------------------//box1----------------------->
-
+<!------------------------------------stoper--------------------------------->
 <section id="stoper">
   <h1 class="title">Stoper</h1>
   <div class="stop">
@@ -59,18 +58,18 @@
     <p>Aktualny czas który upłynął to: <span id="seconds">0</span>.</p>
   </div>
 </section>
-
-<div id="audio">
+<!------------------------------------audio--------------------------------->
+<section id="audio">
   <h1 class="title">Audio bez przeładowania strony</h1>
   <a href="https://www.kasandbox.org/programming-sounds/rpg/giant-no.mp3" id="mp3">Kliknij na mnie</a>
-</div>
-
-<div id="zegar">
+</section>
+<!------------------------------------zegar--------------------------------->
+<section id="zegar">
 <!--  <h1 class="title">Zegar</h1>-->
-  <div id="timer">powinna bbyć godzina </div>
-</div>
-
-<div class="faq">
+  <div id="timer">powinna być godzina </div>
+</section>
+<!------------------------------------faq--------------------------------->
+<section id="faq">
   <h1 class="title">Przykładowe FAQ</h1>
   <h3>FAQ - wersja 1</h3>
   <div class="box">
@@ -88,8 +87,8 @@
   <h2 class="open">Pytanie nr 6 - Jak nazywa sie popularny jezyk programowania webowego?</h2>
   <p class="answer">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem possimus fugiat, nostrum. Placeat, nisi iure odio, natus beatae doloribus minus!</p>
   </div>
-</div>
-
+</section>
+<!------------------------------------kalkulator--------------------------------->
 <section id="kalkulator">
   <h1 class="title">Prosty Kalkulator</h1>
   <div class="calc">
@@ -110,7 +109,7 @@
     <div class="blad"></div>
   </div>
 </section>
-
+<!------------------------------------auto--------------------------------->
 <div id="auto">
   <h1 class="title">Rysowanie z processing.js</h1>
   <h2>Zwiększ prętkość</h2>
@@ -124,7 +123,7 @@
   <button id="sun2">Small Sun</button>
   <canvas data-processing-sources="/js/sun2.js"></canvas>
 </div>
-
+<!------------------------------------circle--------------------------------->
 <section id="circle">
  <h1 class="title">Zakręć kołem</h1>
   <button id="randomButton">Zakręć</button>
@@ -133,15 +132,16 @@
   </div>
  
 </section>
-
-<h1 class="title">Odkręć kartę</h1>
+<!------------------------------------card--------------------------------->
 <section id="card">
- 
-  <div class="flip-card bg1"></div>
-  <div class="flip-card bg2"></div>
-  <div class="flip-card bg3"></div>
-</section>
- 
+ <h1 class="title">Odkręć kartę</h1>
+  <div class="boxCard">
+    <div class="flip-card bg1"></div>
+    <div class="flip-card bg2"></div>
+    <div class="flip-card bg3"></div>
+  </div>
+  </section>
+<!------------------------------------activeForm---------------------------------> 
 <section id="activeForm">
   <h1 class="title">Samouzupełniające się zgłoszenie</h1>
   <form action="">
@@ -154,6 +154,10 @@
       <option value="PHP">PHP</option>
       <option value="MySQL">MySQL</option>
     </select>
+    <br>
+<!--    <a href="http://google.com" target="_blank" >Link do regulaminu</a>-->
+    <label for="regulamin" >Akceptuje regulamin</label>
+     <input type="checkbox" name="regulamin" id="regulamin">
   </form>
   <div id="message">
     <p> Witam. Nazywam się <span id="textName">Jan</span> i mam <span id="textAge">30</span> lat. Moje miasto to: <span id="textCity">Warszawa</span>. <br> Jestem zainteresowany kursem: <span id="textOffer"></span> </p>
@@ -161,7 +165,7 @@
   </div>
 
 </section>
-
+<!------------------------------------modalForm--------------------------------->
 <section id="modalForm">
   <div class="contectForm">
     <h1 class="title">Formularz kontaktowy w formie modal</h1>
@@ -188,7 +192,7 @@
   </div>
   
 </section>
-
+<!------------------------------------gallery--------------------------------->
 <section id="gallery">
   <h1 class="title">Galeria</h1>
   <div class="box">
@@ -216,8 +220,10 @@
   <div id="title">Zdjęcie samochodu nr 1</div>
   <div id="title2"></div>
 </section>
-<h1 class="title">Wykorzystanie show/hide w JQuery</h1>
+<!------------------------------------movieReview--------------------------------->
 <section id="movieReview">
+<h1 class="title">Wykorzystanie show/hide w JQuery</h1>
+<div id="movieReviewBox">
   <div id="leftBar">
     <ul id="lista">
       <li id="link1">Ironman</li>
@@ -244,8 +250,9 @@
       <p>Ut a lectus eu felis consequat scelerisque nec sit amet tortor. Nullam imperdiet quis leo vel gravida. Praesent est mauris, varius a iaculis id, dignissim ac sem. Curabitur pharetra vitae libero ac mollis. Donec bibendum nisl ex. Suspendisse accumsan neque nec est ornare, sit amet condimentum tortor aliquam. Praesent ornare efficitur tortor, id sodales odio eleifend et. Praesent a hendrerit velit. Curabitur eget massa justo. Pellentesque posuere sagittis mi ut pulvinar. Maecenas consequat hendrerit diam vitae sagittis. Nulla blandit nec augue id ornare. Nunc interdum auctor eros, in sollicitudin arcu accumsan vel. Duis pretium odio sit amet metus fringilla mattis. Fusce at rutrum neque. Fusce mollis placerat mattis. Suspendisse potenti. Duis fringilla, turpis nec sollicitudin egestas, nunc lorem consequat sapien, et euismod velit lectus in est.</p>
     </div>
   </div>
+</div>
 </section>
-
+<!------------------------------------keyPress--------------------------------->
 <section id="keyPress">
 <h1 class="title">Kliknij klawisz</h1>
   <div class="keyBox">
@@ -253,7 +260,7 @@
     <div id="key">A</div>
   </div>
 </section>
-
+<!------------------------------------analogClock--------------------------------->
 <section id="analogClock">
  
   <h1 class="title">Zegar analogowy</h1>
@@ -262,9 +269,150 @@
     <div class="clock"> 
       <span class="hand seconds animate"></span> 
       <span class="hand minutes animate"></span> 
-      <span class="hand hours animate"></span> </div>
+      <span class="hand hours animate"></span>
+    </div>
+    
+    <div id="timer2">Powinna być godzina</div>
   </div>
   
+</section>
+<!------------------------------------tooltip--------------------------------->
+<section id="tooltip">
+  <h1 class="title">Tooltip tylko w CSS</h1>
+  <div class="toolBox">
+    <p>Lorem ipsum <span data-title="przykładowy tooltip">Kliknij na mnie! </span>dolor sit amet, consectetur adipisicing elit. Exercitationem blanditiis vero necessitatibus. Et <span data-title="przykładowy tooltip">Kliknij na mnie! </span>illo vero nisi fugit similique amet excepturi.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit voluptates error iure quibusdam quisquam ipsa amet pariatur nobis voluptatibus quo <span data-title="przykładowy tooltip">Kliknij na mnie! </span>soluta, sint, quia quaerat! Aut modi inventore, similique nam quibusdam corrupti harum, quidem ad nisi esse! Eum minus officia, atque at esse obcaecati reiciendis dignissimos veniam vero temporibus mollitia ad, nobis quos aut optio facilis deserunt laborum. Delectus corporis enim quos iste asperiores quis, aut sequi natus quasi maxime laboriosam! Optio assumenda, provident <span data-title="przykładowy tooltip">Kliknij na mnie! </span>excepturi! Similique consequuntur illo, facere quos aperiam, vero iusto exercitationem debitis, necessitatibus illum mollitia quasi fugit quo voluptatibus culpa? Neque ad quaerat a delectus, eaque modi assumenda.</p>
+  </div>
+</section>
+<!------------------------------------corridor--------------------------------->
+<section id="corridor">
+  <h1 class="title">Korytarz</h1>
+  <div class="corridorBox">
+    <div class="doors"></div>
+  </div>
+  
+</section>
+<!------------------------------------console--------------------------------->
+<section id="console">
+  <h1 class="title">Consola</h1>
+  
+  <div class="consoleBox">
+    <h3> Napisz coś od siebie</h3>
+    <textarea name="" id="wprowadz" cols="30" rows="4" placeholder="Napisz coś aby zobaczyć efekt"></textarea>
+    <div class="console">
+      <p class="typing">$<span id="zdanie"> </span></p>
+    </div>
+    <button id="writeSomething">Teraz ja</button>
+    <div class="console">
+      <p class="typing" id="typing2">$</p>
+    </div>
+  </div>
+</section>
+<!------------------------------------howManyLetters--------------------------------->
+<section id="howManyLetters">
+ <h1 class="title">Liczenie wpisywanych znaków</h1>
+  <div class="boxHML">
+   <p>Wpisz dowolny tekst a ja powiem Tobie ile wprowadziłeś znaków.</p>
+    <textarea name="" id="customInput" cols="30" rows="10" placeholder="Wpisz jakis tekst"></textarea>
+    <div>Liczba wykorzystanych znaków to: <span id="charCount">..</span> !</div>
+  </div>
+</section>
+<!------------------------------------hamburgerButton--------------------------------->
+<section id="hamburgerButton">
+  <div id="hamburgerButtonBox">
+    <button class="hamburger"></button>
+<ul class="mainList">
+  <li><a href="#">Strona główna</a></li>
+  <li><a href="#">Cwiczenia z JS</a>
+    <ul class="dropdown">
+      <li><a href="#flex">Flex</a> </li>
+      <li><a href="#stoper">Stoper</a></li>
+      <li><a href="#audio">Audio</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#kalkulator">Kalkulator</a></li>
+      <li><a href="#auto">Processing.js</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#keyPress">Key Press</a></li>
+      <li><a href="#mouseMove">Mouse Move</a></li>
+    </ul>
+  </li>
+  <li><a href="#">Ćwiczenia z CSS</a>
+    <ul class="dropdown">
+      <li><a href="#circle">Losowanie liczby</a></li>
+      <li><a href="#card">Obrotowa karta</a></li>
+      <li><a href="#activeForm">Formularz</a></li>
+      <li><a href="#modalForm">Modal Form</a></li>
+      <li><a href="#movieReview">Recenzje filmowe</a></li>
+      <li><a href="#analogClock">Zegar</a></li>
+      <li><a href="#tooltip">Tooltip</a></li>
+      <li><a href="#corridor">Korytarz</a></li>
+      <li><a href="#heart">Serce</a></li>
+      <li><a href="#doughnut">Pączki</a></li>
+      <li><a href="#stars">Gwiazdy</a></li>
+    </ul>
+  </li>
+<!--
+  <li><a href="#">link - 4</a></li>
+  <li><a href="#">link - 5</a></li>
+-->
+</ul>
+ 
+
+  </div>
+</section>
+<!------------------------------------mouseMove--------------------------------->
+<section id="mouseMove">
+<h1 class="title">Położenie myszki</h1> 
+  <div id="mouse">
+   Client
+    X <span id="posX">0</span> px
+    Y <span id="posY">0</span> px
+    <br>
+  Page
+    X <span id="posPX">0</span> px
+    Y <span id="posPY">0</span> px
+  </div>
+</section>
+<!------------------------------------heart--------------------------------->
+<section id="heart">
+<h1 class="title">Rysujemy serce</h1>
+<!------------------------------------heartBox---------------------------------->
+<div id="heartBox">
+  <p>I <span class="heart"></span> Kodowanie</p>
+</div>  
+</section>
+<!------------------------------------doughnut---------------------------------->
+<section id="doughnut">
+<h1 class="title">Rysujemy pączki</h1>
+  <div id="doughnutBox">
+    <div class="doughnut"></div>
+    <div class="doughnut"></div>
+    <div class="doughnut"></div>
+    <div class="doughnut"></div>
+    <div class="doughnut"></div>
+  </div>
+</section>
+<!------------------------------------stars---------------------------------->
+<section id="stars">
+ <h1 class="title">Ocena produktu</h1>
+  <div id="starsBox">
+    <div class="stars">
+      <input type="radio" id="star5" name="star" value="5">
+      <label for="star5">Five star</label>
+      <input type="radio" id="star4" name="star" value="4">
+      <label for="star4">Four star</label>
+      <input type="radio" id="star3" name="star" value="3">
+      <label for="star3">Three star</label>
+      <input type="radio" id="star2" name="star" value="2">
+      <label for="star2">Two star</label>
+      <input type="radio" id="star1" name="star" value="1">
+      <label for="star1">One star</label>
+
+    </div>
+    
+  </div>
+  
+  <div id="rate">Ocena</div>
 </section>
 
 <script
