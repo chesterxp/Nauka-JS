@@ -1069,3 +1069,28 @@ body {
   text-align: center;
   padding: 10px 20px;
 }
+#flowerBox {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+#flowerBox .rose {
+  width: 13px;
+  height: 300px;
+  background: #128412;
+  position: relative;
+  bottom: -180px;
+  border-radius: 20%;
+  box-shadow: 0 -350px 0 50px red;
+}
+#flowerBox .rose::after {
+  content: '';
+  width: 10px;
+  height: 5px;
+  position: absolute;
+  background: #096809;
+  border-radius: 4px;
+  top: 0;
+  right: 0;
+  box-shadow: 3px 10px 0 #096809, 4px 40px 0 #096809, 3px 150px 0 #096809, 2px 200px 0 #096809, -2px -100px 0 32px #ff0000, -2px -100px 0 29px #ff0000, -2px -100px 0 32px #ff0000, -2px -100px 0 33px #ff0000, -2px -100px 0 35px #ff0000, -2px -100px 0 38px #ff0000, -2px -100px 0 41px #ff0000, -2px -100px 0 44px #ff0000, -2px -100px 0 46px #ff0000, -2px -100px 0 48px #ff0000, -2px -100px 0 51px #ff0000, 0 -150px 0 70px grey;
+}
