@@ -1073,16 +1073,17 @@ body {
   display: flex;
   justify-content: center;
   overflow: hidden;
-  margin: 30px;
+  margin: 30px 0;
 }
 #flowerBox .rose {
   width: 13px;
   height: 300px;
   background: #198419;
   position: relative;
-  bottom: -180px;
+  bottom: -50px;
+  margin-top: 130px;
   border-radius: 20%;
-  box-shadow: 0 -350px 0 50px red;
+  box-shadow: 0 -350px 0 50px #d31717;
 }
 #flowerBox .rose::after {
   content: '';
@@ -1093,5 +1094,17 @@ body {
   border-radius: 4px;
   top: 0;
   right: 0;
-  box-shadow: 3px 10px 0 #096809, 4px 40px 0 #096809, 3px 150px 0 #096809, 2px 200px 0 #096809, -2px -100px 0 32px #ff0000, -2px -100px 0 29px #980808, -2px -100px 0 32px #ff0000, -2px -100px 0 33px #980808, -2px -100px 0 35px #ff0000, -2px -100px 0 38px #980808, -2px -100px 0 41px #ff0000, -2px -100px 0 44px #980808, -2px -100px 0 46px #ff0000, -2px -100px 0 48px #980808, -2px -100px 0 51px #ff0000, 0 -150px 0 70px #797979;
+  box-shadow: 3px 10px 0 #096809, 4px 40px 0 #096809, 3px 150px 0 #096809, 2px 200px 0 #096809, -2px -100px 0 32px #ff0000, -2px -100px 0 29px #d31717, -2px -100px 0 32px #ff0000, -2px -100px 0 33px #d31717, -2px -100px 0 35px #ff0000, -2px -100px 0 38px #d31717, -2px -100px 0 41px #ff0000, -2px -100px 0 44px #d31717, -2px -100px 0 46px #ff0000, -2px -100px 0 48px #d31717, -2px -100px 0 51px #ff0000, 0 -150px 0 70px #797979;
+}
+#flowerBox .rose::before {
+  content: "";
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  border-top-right-radius: 90%;
+  border-bottom-left-radius: 90%;
+  background: #008800;
+  top: 80px;
+  right: 3px;
+  box-shadow: 95px 60px 0 #096809;
 }
