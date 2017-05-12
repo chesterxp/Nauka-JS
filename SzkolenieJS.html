@@ -334,6 +334,7 @@
       <li><a href="#gallery">Gallery</a></li>
       <li><a href="#keyPress">Key Press</a></li>
       <li><a href="#mouseMove">Mouse Move</a></li>
+      <li><a href="#powerOfPasword">Miernik hasła</a></li>
     </ul>
   </li>
   <li><a href="#">Ćwiczenia z CSS</a>
@@ -422,6 +423,41 @@
     <div class="rose"></div>
   </div>
 </section>
+
+<section id="textCopy">
+  <h1 class="title">Kopiuj bez kopiowania</h1>
+  <div id="textCopyBox">
+    <input type="text" id="copier-value">
+    <button id="copier-submit">Same Kopiowanie!</button>
+    <button id="past-submit">Wklej!</button>
+    <textarea name="" id="copyField" cols="30" rows="10"></textarea>
+  </div>
+</section>
+
+<!--
+<section id="notes">
+  <div id="notesBox">
+    <div class="sticker">
+      <div class="bar"></div>
+      <textarea></textarea>
+    </div>
+  </div>
+</section>
+-->
+
+<section id="powerOfPasword">
+ <h1 class="title">Miernik hasła do logowania</h1>
+  <div class="passwordWrapper">
+    <label for="passwordField">Wprowadź nowe hasło</label>
+    <p>Hasło musi składać się z minimum 8 znaków. Wykorzystaj małe i duże litery, cyfry oraz znaki specialne.</p>
+    <input type="password" id="passwordField" placeholder="Wpisz tutaj swoje hasło">
+    <progress id="passwordComplexity" value="0"></progress>
+    <div id="opinion">
+      słabe hasło
+    </div>
+  </div>
+</section>
+
 
 <script
   src="https://code.jquery.com/jquery-2.2.4.min.js"

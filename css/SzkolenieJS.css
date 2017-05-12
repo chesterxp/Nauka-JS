@@ -1108,3 +1108,74 @@ body {
   right: 3px;
   box-shadow: 95px 60px 0 #096809;
 }
+#textCopy #textCopyBox {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px 0;
+}
+#notes #notesBox {
+  position: relative;
+}
+#notes #notesBox .sticker {
+  background: #ffffff;
+  padding-top: 20px;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 1px solid #34b399;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.46);
+}
+#notes #notesBox .sticker .bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  background: #34b399;
+  width: 100%;
+}
+#notes #notesBox .sticker .bar:hover {
+  cursor: move;
+}
+#notes #notesBox .sticker textarea {
+  padding: 3px 10px;
+  box-sizing: border-box;
+  min-width: 100px;
+  min-height: 100px;
+  background: transparent;
+  border: none;
+}
+.passwordWrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px auto;
+  text-align: center;
+  color: white;
+}
+.passwordWrapper label,
+.passwordWrapper #opinion {
+  padding: 10px 20px;
+  background: #6a6a6a;
+  color: white;
+  margin-top: 10px;
+}
+.passwordWrapper #opinion {
+  color: red;
+  font-size: 0.9em;
+}
+.passwordWrapper p {
+  font-size: 0.6em;
+  padding: 5px;
+  width: 200px;
+}
+.passwordWrapper input,
+.passwordWrapper progress {
+  width: 200px;
+  margin: 10px 0;
+}

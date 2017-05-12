@@ -413,5 +413,119 @@ var countStars = function(){
 };
 
 var stars = document.getElementById('stars');
-
 stars.addEventListener('click',countStars);
+
+//------------------------------textCopy------------
+
+var imputText = document.getElementById('copier-value');
+
+var copyText = document.getElementById('copier-submit');
+var textCopy = function(){  
+  imputText.select();
+  document.execCommand('copy');
+}
+copyText.addEventListener('click',textCopy);
+
+var pastSubmit = document.getElementById('past-submit');
+var textField = document.getElementById('copyField');
+
+var pastText = function(){
+  textField.textContent = imputText.value;
+}
+
+pastSubmit.addEventListener('click',pastText);
+
+//------------------------------notes------------
+
+//(function(){
+//  'use strict';
+//  
+//  var draggedEl,
+//      onDragStart,
+//      onDrag,
+//      onDragEnd;
+//  
+//  onDragStart = function(ev){
+//    var boundCl
+//  }
+//})();
+
+
+//------------------------------others---------------------
+
+var znaki,total;
+var liczenie = function (ile) {
+  for (var i = 1; i < ile + 1; i++) {
+    znaki = "";
+    for (var j = 0; j < i; j++) {
+      znaki += "_";
+    }
+    total = znaki + i;
+    console.log(total);
+  }
+}
+
+
+//------------------------------powerOfPasword---------------------
+  var progress = document.querySelector('#passwordComplexity');
+
+var opinion = document.getElementById('opinion');
+var calculateComplexity = function (password){
+  var complexity = 0;
+  var regExps = [
+    /[a-z]/,
+    /[A-Z]/,
+    /[0-9]/,
+    /.{8}/,//minumium 8 znaków
+    /.{16}/,
+    /[!-//-@[-`{-ý]/
+    
+    
+    
+  ];
+  regExps.forEach(function(regexp){
+    if(regexp.test(password)){
+      complexity++;
+      console.log(complexity);
+      if(complexity<3){
+        opinion.textContent = "słabe hasło";
+      }
+      else if(complexity===3){
+        opinion.textContent = "średnie hasło";
+      }
+      else if(complexity===4){
+        opinion.textContent =  "dobre hasło";
+      }
+      else if(complexity>4){
+        opinion.textContent =  "bardzo dobre hasło";
+      }       
+    }
+  });
+  
+  return{
+    value:complexity,
+    max:regExps.length
+  };
+  
+  
+
+};
+
+var checkPasswordStregth = function (password){
+
+  complexity = calculateComplexity(this.value);
+  
+  progress.value = complexity.value;
+  progress.max = complexity.max;
+  
+
+}
+
+
+
+var input = document.querySelector('#passwordField');
+input.addEventListener('keyup',checkPasswordStregth);
+
+
+
+
