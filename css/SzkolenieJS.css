@@ -1179,3 +1179,30 @@ body {
   width: 200px;
   margin: 10px 0;
 }
+#breadcrumbs #breadcrumbsBox {
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#breadcrumbs #breadcrumbsBox .breadcrumbs {
+  list-style-type: none;
+  display: flex;
+  padding: 10px 0;
+  margin: 0;
+}
+#breadcrumbs #breadcrumbsBox .breadcrumbs a {
+  text-decoration: none;
+  color: #ffffff;
+}
+#breadcrumbs #breadcrumbsBox .breadcrumbs a:hover {
+  text-decoration: underline;
+}
+#breadcrumbs #breadcrumbsBox .breadcrumbs li:after {
+  content: ">";
+  margin: 10px;
+}
+#breadcrumbs #breadcrumbsBox .breadcrumbs + h1 {
+  font-size: 3em;
+  margin: 0;
+}

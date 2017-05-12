@@ -1207,7 +1207,7 @@ body{
     }
 }
 }
-
+//----------------------textCopy-------------------
 #textCopy{
   #textCopyBox{
     display: flex;
@@ -1217,8 +1217,7 @@ body{
     margin: 30px 0;
   }
 }
-
-
+//----------------------notes----------------------
 #notes{
   #notesBox{
     position:relative;
@@ -1256,10 +1255,7 @@ body{
     }
   }
 }
-
-
-
-
+//----------------------powerOfPasword----------------------
 .passwordWrapper{
   display: flex;
   justify-content: center;
@@ -1288,5 +1284,43 @@ body{
   input, progress{
     width: 200px;
     margin: 10px 0;
+  }
+}
+//----------------------breadcrumbs----------------------
+#breadcrumbs{
+  #breadcrumbsBox{
+    color: #ffffff; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .breadcrumbs{
+      list-style-type: none;
+      display: flex;
+      padding: 10px 0;
+      margin: 0;
+      
+      
+      a{
+        text-decoration: none;
+        color: #ffffff;
+        
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+      
+      li:after{
+        content: ">";
+        margin: 10px;
+      }
+      
+      &+h1{
+        font-size: 3em;
+        margin: 0;
+      }
+      
+      
+      
+    }
   }
 }
