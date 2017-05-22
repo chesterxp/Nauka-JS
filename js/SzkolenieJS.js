@@ -467,7 +467,7 @@ var liczenie = function (ile) {
 
 
 //------------------------------powerOfPasword---------------------
-  var progress = document.querySelector('#passwordComplexity');
+var progress = document.querySelector('#passwordComplexity');
 
 var opinion = document.getElementById('opinion');
 var calculateComplexity = function (password){
@@ -479,14 +479,10 @@ var calculateComplexity = function (password){
     /.{8}/,//minumium 8 znaków
     /.{16}/,
     /[!-//-@[-`{-ý]/
-    
-    
-    
   ];
   regExps.forEach(function(regexp){
     if(regexp.test(password)){
       complexity++;
-      console.log(complexity);
       if(complexity<3){
         opinion.textContent = "słabe hasło";
       }
@@ -506,9 +502,6 @@ var calculateComplexity = function (password){
     value:complexity,
     max:regExps.length
   };
-  
-  
-
 };
 
 var checkPasswordStregth = function (password){
@@ -517,14 +510,75 @@ var checkPasswordStregth = function (password){
   
   progress.value = complexity.value;
   progress.max = complexity.max;
+  }
+
+var PasswordInput = document.querySelector('#passwordField');
+PasswordInput.addEventListener('keyup',checkPasswordStregth);
+
+
+//----------------------helpfullText----------------------
+
+
+var wrapper = document.querySelector('.typeAhead'),
+    helpInput = wrapper.querySelector('input'),
+    list,
+    predefinedValues;
+
+predefinedValues =[
+  'koduje',
+  'koduje.je',
+  'functionite',
+  'super',
+  'kanał',
+  'subskrybuj'
+];
+
+
+var createList = function (values){
+  if(list){
+    wrapper.removeChild(list);
+  }
+  var ul = document.createElement('ul');
   
+  values.forEach(function(value){
+    var li = document.createElement('li');
+    li.textContent = value;
+    ul.appendChild(li);
+  });
+  
+  return ul;
+};
 
-}
+var manageList = function(string){
+  var showedValues = predefinedValues.filter(function(value){
+    return value.indexOf(string)==0;
+  });
+  
+  if (showedValues.length){
+    list=createList(showedValues);
+    wrapper.appendChild(list);
+  }
+  else if (list!=null){
+    wrapper.removeChild(list);
+    list = null;
+  }
+};
+
+var onType = function(){
+  manageList(this.value);
+};
+
+
+helpInput.addEventListener('keyup',onType)
 
 
 
-var input = document.querySelector('#passwordField');
-input.addEventListener('keyup',checkPasswordStregth);
+
+
+
+
+
+
 
 
 

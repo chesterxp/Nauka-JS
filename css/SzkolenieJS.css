@@ -152,6 +152,86 @@ body {
   opacity: 1;
   z-index: 100;
 }
+#hamburgerButton #hamburgerButtonBox {
+  display: flex;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 100;
+}
+#hamburgerButton #hamburgerButtonBox .hamburger {
+  width: 40px;
+  height: 35px;
+  border: 0;
+  border-top: 5px solid white;
+  background: transparent;
+  position: relative;
+  transition: all 0.3s linear;
+  padding: 20px;
+}
+#hamburgerButton #hamburgerButtonBox .hamburger::before,
+#hamburgerButton #hamburgerButtonBox .hamburger::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-top: 5px solid white;
+  transform: translateY(10px);
+}
+#hamburgerButton #hamburgerButtonBox .hamburger::after {
+  transform: translateY(25px);
+  transition: all 0.3s linear;
+}
+#hamburgerButton #hamburgerButtonBox .hamburger:focus {
+  transform: rotate(45deg) translateY(5px);
+  border: none;
+  outline: 0;
+}
+#hamburgerButton #hamburgerButtonBox .hamburger:focus::after {
+  transform: rotate(-90deg) translateX(-10px);
+}
+#hamburgerButton #hamburgerButtonBox .hamburger:focus ~ .mainList {
+  opacity: 0.9;
+}
+#hamburgerButton #hamburgerButtonBox .mainList {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  position: relative;
+  top: 50px;
+  left: -60px;
+  opacity: 0;
+  z-index: 100;
+  transition: all 0.2s ease-in-out;
+}
+#hamburgerButton #hamburgerButtonBox .mainList li {
+  position: relative;
+}
+#hamburgerButton #hamburgerButtonBox .mainList li a {
+  text-decoration: none;
+  padding: 10px;
+  color: white;
+  background: #626060;
+  display: inline-block;
+  width: 120px;
+  text-align: center;
+  font-size: 0.7em;
+}
+#hamburgerButton #hamburgerButtonBox .mainList li a:hover {
+  background: white;
+  color: #626060;
+}
+#hamburgerButton #hamburgerButtonBox .mainList li .dropdown {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
+}
+#hamburgerButton #hamburgerButtonBox .mainList li:hover .dropdown {
+  display: block;
+}
 #flex {
   text-align: center;
 }
@@ -406,10 +486,12 @@ body {
   background-size: cover;
 }
 #activeForm form {
-  width: 20%;
   margin: 0 auto;
   padding: 30px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 #activeForm form label,
 #activeForm form input,
@@ -434,8 +516,13 @@ body {
 #activeForm form label {
   font-size: 0.6em;
 }
-#activeForm form [type=checkbox] ~ label {
-  display: inline-block;
+#activeForm form .extraBox {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#activeForm form .extraBox #regulamin {
+  margin-left: 10px;
 }
 #activeForm #message {
   margin: 0 auto;
@@ -841,86 +928,6 @@ body {
 #howManyLetters .boxHML textarea {
   width: 30%;
 }
-#hamburgerButton #hamburgerButtonBox {
-  display: flex;
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  z-index: 100;
-}
-#hamburgerButton #hamburgerButtonBox .hamburger {
-  width: 40px;
-  height: 35px;
-  border: 0;
-  border-top: 5px solid white;
-  background: transparent;
-  position: relative;
-  transition: all 0.3s linear;
-  padding: 20px;
-}
-#hamburgerButton #hamburgerButtonBox .hamburger::before,
-#hamburgerButton #hamburgerButtonBox .hamburger::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  border-top: 5px solid white;
-  transform: translateY(10px);
-}
-#hamburgerButton #hamburgerButtonBox .hamburger::after {
-  transform: translateY(25px);
-  transition: all 0.3s linear;
-}
-#hamburgerButton #hamburgerButtonBox .hamburger:focus {
-  transform: rotate(45deg) translateY(5px);
-  border: none;
-  outline: 0;
-}
-#hamburgerButton #hamburgerButtonBox .hamburger:focus::after {
-  transform: rotate(-90deg) translateX(-10px);
-}
-#hamburgerButton #hamburgerButtonBox .hamburger:focus ~ .mainList {
-  opacity: 0.9;
-}
-#hamburgerButton #hamburgerButtonBox .mainList {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: inline-block;
-  position: relative;
-  top: 50px;
-  left: -60px;
-  opacity: 0;
-  z-index: 100;
-  transition: all 0.2s ease-in-out;
-}
-#hamburgerButton #hamburgerButtonBox .mainList li {
-  position: relative;
-}
-#hamburgerButton #hamburgerButtonBox .mainList li a {
-  text-decoration: none;
-  padding: 10px;
-  color: white;
-  background: #626060;
-  display: inline-block;
-  width: 120px;
-  text-align: center;
-  font-size: 0.7em;
-}
-#hamburgerButton #hamburgerButtonBox .mainList li a:hover {
-  background: white;
-  color: #626060;
-}
-#hamburgerButton #hamburgerButtonBox .mainList li .dropdown {
-  display: none;
-  position: absolute;
-  left: 100%;
-  top: 0;
-}
-#hamburgerButton #hamburgerButtonBox .mainList li:hover .dropdown {
-  display: block;
-}
 #mouseMove {
   text-align: center;
 }
@@ -1205,4 +1212,35 @@ body {
 #breadcrumbs #breadcrumbsBox .breadcrumbs + h1 {
   font-size: 3em;
   margin: 0;
+}
+#helpfullText {
+  margin: 30px auto;
+}
+#helpfullText #helpfullTextBox {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+#helpfullText #helpfullTextBox .typeAhead {
+  display: flex;
+  flex-wrap: wrap;
+  width: 200px;
+}
+#helpfullText #helpfullTextBox .typeAhead input {
+  flex-basis: 100%;
+}
+#helpfullText #helpfullTextBox .typeAhead ul {
+  list-style-type: none;
+  padding: 0;
+  flex-basis: 100%;
+  border: 1px solid #b1b1b1;
+  margin: 0;
+}
+#helpfullText #helpfullTextBox .typeAhead li {
+  border: 1px solid #b1b1b1;
+  padding: 5px;
+  color: white;
+}
+#marginBottom {
+  margin-bottom: 100px;
 }

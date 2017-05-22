@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cwiczenia </title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,900&amp;subset=latin-ext" rel="stylesheet">  
+  <link rel="stylesheet" href="css/cwiczenia.css">
+</head>
+
+<body>
+
+<header>
+  <!--    <a href="#" id="logo">LOGO</a>-->
+  <nav>
+    <a href="#" id="menu-icon"></a>
+    <ul>
+      <li><a href="SzkolenieJS.html">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Gallery</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    
+  </nav>
+</header>
+<div id="black"></div>
+<section id="loginForm">
+    <div class="main">
+      <h1>Logowanie</h1>
+      <div id="formWrapper">
+        <form method="get" action="login.php" id="login">
+            <label for="username">Nazwa:</label>
+            <input type="text" name="username" id="username">
+            <label for="password">Hasło: </label>
+            <input type="password" name="password" id="password">
+            <input type="submit" name="button" id="button" value="Wyślij">
+        </form>      
+      </div>
+    </div>
+  </section>
+
+<h1 id="mainTitle">Notatki z ćwiczeń</h1>
+
+<section id="watch2">
+  <h1 class="mainTitle">Pokazanie daty i czasu w JS</h1>
+  <div id="watchBox">
+    <button id="odpalButton">Odpal Czas</button>
+    <div id="odpalCzas">Tutaj powinien byc czas</div>
+  </div>
+
+</section>
+
+<section id="news">
+   <h3 class="mainTitle">Wczytanie danych z innych stron bez przeładowania strony</h3>
+    <ul id="list">
+      <li><a href="batman.html">Batman</a></li>
+      <li><a href="Superman.html">Superman</a></li>
+      <li><a href="Spiderman.html">Spiderman</a></li>
+      <li><a href="Ironman.html">IronMan</a></li>
+      <li><a href="Thor.html">Thor</a></li>
+    </ul>
+    <div class="caption">
+      <h2></h2>
+      <p></p>
+      <img src="" alt="">
+    </div>
+  </section>
+
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+  
+<script src="js/cwiczenia.js"></script>
+ 
+</body>
+</html>

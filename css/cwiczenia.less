@@ -1,0 +1,264 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+//--------------------------------//Reset CSS -----------------------------------------------------//
+
+@color-grey:#5d5d5d;
+body{
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+}
+
+#black{
+  background: rgb(0, 0, 0);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  
+}
+#mainTitle{
+  text-align: center;
+  padding: 20px 40px;
+  background: black;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  box-shadow: 0 0 10px black;
+}
+.mainTitle{
+  padding: 10px 30px;
+  background: @color-grey;
+  color: white;
+  margin-bottom: 10px;
+  text-align: center;
+  margin: 0 auto;
+}
+header{
+  background: @color-grey;
+  width: 100%;
+  height: 76px;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  nav{
+    float: right;
+    padding: 20px;
+    ul{
+      list-style-type: none;
+
+      li{
+        display: inline-block;
+        float: left;
+        padding: 10px;
+        a{
+          color: aliceblue;
+          text-decoration: none;
+          font-weight: bold;
+          &:hover{
+            color: black;
+          }
+        }
+      }
+    }
+    #menu-icon{
+      background: url(/images/list-512.png);
+      background-size: cover;
+      width: 32px;
+      height: 32px;
+    }
+  }
+}
+#loginForm{
+//  display: flex;
+//  position: relative;
+//  justify-content: center;
+//  align-items: center;
+  position: absolute;
+  top: -30px;
+  left: 0px;
+  z-index: 300;
+
+.main{
+  background: #393838;
+  color: white;
+  padding: 10px 30px;
+  width: 250px;
+  text-align: center;
+  border-radius: 5px;
+  position: absolute;
+  top: 30px;
+  h1{
+    padding: 10px 0;
+    
+    color: aliceblue;
+  }
+  
+  #formWrapper{
+    #fail{
+      color: #fa3b3b;
+    }
+    form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    label,input{
+      margin:5px;
+    }
+  }
+    p{
+      margin: 0;
+      padding: 10px 0;
+      color: #a5a5a5;
+    }
+  }
+}
+}
+#watch2 {
+  #watchBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    #odpalCzas {
+      padding: 20px;
+      background: black;
+      color: aliceblue;
+      display: inline-block;
+      
+    }
+  }
+}
+#news{
+  h3{
+    text-align: center;
+  }
+  #list{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 15px auto;
+    a{
+      text-decoration: none;   
+      color: white;
+      background:#696969;
+      padding: 10px 30px;
+      font-size: 1em;
+      &:hover{
+        background: white;
+        color: #696969;
+      }
+    }
+  }
+  
+  .caption{
+    text-align: center;
+    margin: 0;
+    background: black;
+    color: aliceblue;
+    h2{
+      text-align: center;
+      padding: 20px 0;
+    }
+    p{
+      padding: 20px;
+      line-height: 28px;
+    }
+    img{
+      text-align: center;
+      margin: 0 auto;
+      width: 50%;
+      height: auto;
+    }
+  }
+}
+
+
+@media all and (max-width:640px){
+  header{
+    position: relative;
+    
+    nav{
+      #menu-icon{
+        display: inline-block;
+        margin-right: 20px;
+      }
+      
+      ul{
+        display: none;
+        position: absolute;
+        padding: 20px;
+        background: @color-grey;
+        right: 10px;
+        top: 65px;
+        width: 35%;
+        box-shadow: 0 0 5px black;
+        
+        li{
+          text-align: center;
+          width: 100%;
+          padding: 15px 0;
+          margin: 0;
+        }
+      } 
+      &:hover{
+        ul{
+          display: block;
+        }
+
+      }
+    }
+  }
+  
+  
+}
