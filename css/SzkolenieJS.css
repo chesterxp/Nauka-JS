@@ -306,17 +306,6 @@ body {
   background: white;
   color: #a6ed8e;
 }
-#zegar #timer {
-  width: auto;
-  padding: 10px;
-  background: black;
-  color: white;
-  position: fixed;
-  bottom: 0px;
-  right: 0px;
-  border: none;
-  z-index: 100;
-}
 #faq {
   display: flex;
   justify-content: center;
@@ -1283,4 +1272,130 @@ body {
   transform: scale(1.1);
   border-color: #ffc600;
   box-shadow: 0 0 10px #ffc600;
+}
+#nextClock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: scale(0.7);
+}
+#nextClock .clock2 {
+  width: 200px;
+  height: 200px;
+  border: 26px solid white;
+  margin: 40px auto;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px black;
+  background: radial-gradient(white, blue);
+  position: relative;
+}
+#nextClock .clock2 .clock-face {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#nextClock .clock2 .clock-face .hand2 {
+  background: black;
+  width: 45%;
+  height: 5px;
+  border-radius: 3px;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: rotate(90deg);
+  transform-origin: 100%;
+}
+#nextClock .clock2 .clock-face .second-hand {
+  background: red;
+  height: 3px;
+}
+#nextClock .clock2 .clock-face .sign {
+  border: 10px solid #222e45;
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 46%;
+  left: 44%;
+  transform-origin: 100%;
+  box-sizing: border-box;
+}
+#nextClock .hours {
+  font-size: 0.9em;
+}
+#nextClock .hours .number1 {
+  position: absolute;
+  top: -6px;
+  right: 35px;
+}
+#nextClock .hours .number2 {
+  position: absolute;
+  top: 35px;
+  right: -4px;
+}
+#nextClock .hours .number3 {
+  position: absolute;
+  top: 90px;
+  right: -18px;
+}
+#nextClock .hours .number4 {
+  position: absolute;
+  top: 143px;
+  right: -5px;
+}
+#nextClock .hours .number5 {
+  position: absolute;
+  top: 184px;
+  right: 35px;
+}
+#nextClock .hours .number6 {
+  position: absolute;
+  top: 202px;
+  right: 94px;
+}
+#nextClock .hours .number7 {
+  position: absolute;
+  top: 188px;
+  right: 150px;
+}
+#nextClock .hours .number8 {
+  position: absolute;
+  top: 143px;
+  right: 192x;
+}
+#nextClock .hours .number9 {
+  position: absolute;
+  top: 90px;
+  right: 205px;
+}
+#nextClock .hours .number10 {
+  position: absolute;
+  top: 35px;
+  right: 188px;
+}
+#nextClock .hours .number11 {
+  position: absolute;
+  top: -6px;
+  right: 152px;
+}
+#nextClock .hours .number12 {
+  position: absolute;
+  top: -22px;
+  left: 43%;
+}
+#timer {
+  width: auto;
+  padding: 10px;
+  background: #222e45;
+  color: white;
+  border: none;
+  z-index: 100;
+  position: absolute;
+  bottom: -67px;
+  left: 20%;
+  text-align: center;
+  border-radius: 5px;
 }

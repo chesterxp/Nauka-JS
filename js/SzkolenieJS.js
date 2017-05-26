@@ -112,9 +112,10 @@ function odliczanie() {
 	if (minuta < 10) minuta = "0" + minuta;
 	var sekunda = dzisiaj.getSeconds();
 	if (sekunda < 10) sekunda = "0" + sekunda;
-    var timer = dzien + " " + miesiac + " " + rok + "  - " + godzina + ":" + minuta + ":" + sekunda;
+//    var timer = dzien + " " + miesiac + " " + rok + "  - " + godzina + ":" + minuta + ":" + sekunda;
+      var timer = dzien + " " + miesiac + " " + rok;
 	document.getElementById('timer').innerHTML = timer;
-	document.getElementById('timer2').innerHTML = godzina + ":" + minuta + ":" + sekunda;
+//	document.getElementById('timer2').innerHTML = godzina + ":" + minuta + ":" + sekunda;
 
 	setTimeout("odliczanie()", 1000);
 }
@@ -315,22 +316,22 @@ document.addEventListener('keyup',function(e){
 //-------------analogClock------------------
 
 
-var secondsHand = document.querySelector('.seconds');
-var minutesHand = document.querySelector('.minutes');
-var hoursHand = document.querySelector('.hours');
-now = new Date();
-
-var setupClock = function(){
-  var secs = now.getSeconds();
-  var mins = now.getMinutes()*60;
-  var hours = now.getHours()*3600;
-  
-  secondsHand.style.animationDelay = '-' + secs + "s" ;
-  minutesHand.style.animationDelay = '-' + mins + 's';
-  hoursHand.style.animationDelay = '-' + hours + 's';
-}
-
-setupClock();
+//var secondsHand = document.querySelector('.seconds');
+//var minutesHand = document.querySelector('.minutes');
+//var hoursHand = document.querySelector('.hours');
+//now = new Date();
+//
+//var setupClock = function(){
+//  var secs = now.getSeconds();
+//  var mins = now.getMinutes()*60;
+//  var hours = now.getHours()*3600;
+//  
+//  secondsHand.style.animationDelay = '-' + secs + "s" ;
+//  minutesHand.style.animationDelay = '-' + mins + 's';
+//  hoursHand.style.animationDelay = '-' + hours + 's';
+//}
+//
+//setupClock();
 
 
 //-----------------console--------------------------
@@ -572,7 +573,30 @@ var onType = function(){
 helpInput.addEventListener('keyup',onType)
 
 
+//-----------------------nextClock -----------------------
+var secondHand = document.querySelector('.second-hand');
+var minHand = document.querySelector('.min-hand');
+var hourHand = document.querySelector('.hour-hand');
 
+function setDate(){
+  var now = new Date();
+  var second = now.getSeconds();
+  var secondsDegrees = second*6+90;
+  secondHand.style.transform = 'rotate('+secondsDegrees+'deg)';
+  
+  var min = now.getMinutes();
+  
+  var minDegrees  = min*6+90;
+  minHand.style.transform = 'rotate('+minDegrees+'deg)';
+  
+  var hour = now.getHours();
+  var hourDegrees  = (min*0.5)+hour*30+90;
+  hourHand.style.transform = 'rotate('+hourDegrees+'deg)';
+  
+  console.log(hourDegrees);
+}
+
+setInterval(setDate,1000);
 
 
 
