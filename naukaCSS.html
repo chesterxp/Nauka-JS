@@ -11,54 +11,277 @@
   <link rel="stylesheet" href="css/naukaCSS.css">
 </head>
 <body>
+
 <header>
-  <h1>Testujemy nową gałąź</h1>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur voluptas cum ut repudiandae itaque, commodi laboriosam debitis, qui nemo quidem aut fugit, quos architecto. Nihil ea ducimus adipisci in molestias!</p>
-  <img src="/images/cars/auto1.jpg" alt="">
+  <h1>Ćwiczenia z CSS</h1>
 </header>
 
-<section id="testy">
-  <div class="box">testowe boxy</div>
-  <div class="box">testowe boxy</div>
-  <div class="box">testowe boxy</div>
-  <div class="box">testowe boxy</div>
-  <div class="box">testowe boxy</div>
-  <div class="box">testowe boxy</div>
-  <div class="box">testowe boxy</div>
-  <div class="box">testowe boxy</div>
-  <div class="box">testowe boxy</div>
-  <div class="box">testowe boxy</div>
-  <div class="box">testowe boxy</div>
-  <div class="box">testowe boxy</div>
-  <div class="box">testowe boxy</div>
-  <div class="box">testowe boxy</div>
-  <div class="box">testowe boxy</div>
-  <div class="box">testowe boxy</div>
-  <div class="box">testowe boxy</div>
-  <div class="box">testowe boxy</div>
-  <div class="box">testowe boxy</div>
-  <div class="box">testowe boxy</div>
-  <div class="box">testowe boxy</div>
-  <div class="box">testowe boxy</div>
-  <div class="box">testowe boxy</div>
-  <div class="box">testowe boxy</div>
-  <div class="box">testowe boxy</div>
-  <div class="box">testowe boxy</div>
-  <div class="box">testowe boxy</div>
-  <div class="box">testowe boxy</div>
-  <div class="box">testowe boxy</div>
-  <div class="box">testowe boxy</div>
-  <div class="box">testowe boxy</div>
-  <div class="box">testowe boxy</div>
-  <div class="box">testowe boxy</div>
+<nav id="main">
+  <div id="logo">
+     <p>LOGO</p>
+   </div>
+  <ul class="mainList">
+    <li class="mainPoint">Exercise 1
+      <ul>
+        <li><a href="#">cwiczeniaA</a></li>
+        <li><a href="#">cwiczeniaA</a></li>
+        <li><a href="#">cwiczeniaA</a></li>
+        <li><a href="#">cwiczeniaA</a></li>
+        <li><a href="#">cwiczeniaA</a></li>
+      </ul>
+    </li>
+    <li class="mainPoint">Exercise 2
+      <ul>
+        <li><a href="#">cwiczeniaA</a></li>
+        <li><a href="#">cwiczeniaA</a></li>
+        <li><a href="#">cwiczeniaA</a></li>
+        <li><a href="#">cwiczeniaA</a></li>
+        <li><a href="#">cwiczeniaA</a></li>
+      </ul>
+    </li>
+    <li class="mainPoint">Exercise 3
+      <ul>
+        <li><a href="#">cwiczeniaA</a></li>
+        <li><a href="#">cwiczeniaA</a></li>
+        <li><a href="#">cwiczeniaA</a></li>
+        <li><a href="#">cwiczeniaA</a></li>
+        <li><a href="#">cwiczeniaA</a></li>
+      </ul> 
+    </li>
+    <li class="mainPoint">Exercise 4</li>
+    <li class="mainPoint">Top Secret</li>
+  </ul>
+</nav>
+
+<section id="buttonEffect">
+ <h1>Button Effect</h1>
+  <div id="buttonEffectBox">
+    <button class="button type1"> Effect one </button>
+    <button class="button type2"> Effect two </button>
+    <button class="button type3"> Effect three </button>
+    <button class="button2"> Effect four </button>
+  </div>
 </section>
 
+<section id="blurEffect">
+  <h1>Blur Effect</h1>
+  <div id="blurEffectBox">
+    <div class="controls">
+      <label for="spacing">Spacing:</label>
+      <input id="spacing" type="range" name="spacing" min="10" max="200" value="10" data-sizing="px">
+      <label for="blur">Blur:</label>
+      <input id="blur" type="range" name="blur" min="0" max="25" value="0" data-sizing="px">
+      <label for="base">Base Color</label>
+      <input id="base" type="color" name="base" value="#ffc600"> </div>
+      <input type="button" value="zmien" id="zmien"> 
+      <img src="images/cars/auto1.jpg" id="photoToChange"> </div>
+</section>
+
+<canvas id="draw" width="800" height="800"></canvas>
+
+<section id="flexGalleryPanel">
+  <div class="box">
+    <div class="slajd bg1">
+      <p>górny tekst</p>
+      <p>srodkowy tekst</p>
+      <p>dolny tekst</p>
+    </div>
+    <div class="slajd bg2">
+      <p>górny tekst</p>
+      <p>srodkowy tekst</p>
+      <p>dolny tekst</p>
+    </div>
+    <div class="slajd bg3">
+      <p>górny tekst</p>
+      <p>srodkowy tekst</p>
+      <p>dolny tekst</p>
+    </div>
+    <div class="slajd bg4">
+      <p>górny tekst</p>
+      <p>srodkowy tekst</p>
+      <p>dolny tekst</p>
+    </div>
+    <div class="slajd bg5">
+      <p>górny tekst</p>
+      <p>srodkowy tekst</p>
+      <p>dolny tekst</p>
+    </div>
+  </div>
+</section>
+
+<section id="ParallaxEffect">
+   <h2>ParallaxEffect</h2>
+    <div id="box1">
+    <h1>ŁUKASZ TEAM</h1>
+  </div>
+  <div id="box2">
+    <h1>ŁUKASZ TEAM</h1>
+  </div>
+  <div id="box3">
+    <h1>ŁUKASZ TEAM</h1>
+  </div>
+</section>
+
+<section id="BoxShadowEffect">
+ <h1>Box Shadow Effect</h1>
+  <div id="shadowBox">
+    <div id="mainShadow">
+      <img src="images/cars/auto15.jpg" alt="">
+      <div id="shadoww"></div>
+    </div>
+  </div>
+</section>
+
+<section id="LoadingPage">
+ <h1>Loading sign</h1>
+  <div id="loadingBox">
+    <div id="text">LOADING</div>
+    <div id="circle1"></div>
+    <div id="circle2"></div>
+    <div id="circle3"></div>
+  </div>
+</section>
+
+<section id="roundHover">
+  <div id="roundHoverBox">
+    <div id="circle">
+      <div id="textHover">Nice!!!</div>
+    </div>
+    
+  </div>
+</section>
+
+<section id="button3d">
+  <div id="button3dBox">
+    <a href="" id="coolButton"> Push </a>
+  </div>
+</section>
+
+<section id="circleButton">
+  <div class="circleButtonBox">
+    <div class="superButton">PUSH</div>
+  </div>
+  <div class="circleButtonBox">
+    <div class="superButton2">PUSH</div>
+  </div>
+  <div class="circleButtonBox">
+    <div class="superButton3">PUSH</div>
+  </div>
+  <div class="circleButtonBox">
+    <div class="superButton4">
+     <div class="icon"></div>
+      <p>SEND</p>
+    </div>
+  </div>
+</section>
+<!--
+<div class="buttonx">
+  <h1>Guziki</h1>
+  <div id="buttonxBox">
+    <div class="part">
+      <button id="btn"></button>
+    </div>
+    <div class="part">
+      <button id="btn2">
+       <div class="icon"></div>
+        <img src="/images/sendMail.png" alt="">
+        <p>SEND</p>
+      </button>
+    </div>
+  </div>
+</div>
+-->
+<section id="switchOn">
+  <div id="switchOnBox">
+    <label for="" id="mainSwitch">
+      <input type="checkbox"/>
+      <span id="custom">
+        <span id="circle"></span>
+      </span>
+    </label>
+  </div>
+</section>
+
+<section id="stackCard">
+  <div id="stackCardBox">
+    <div id="cards">
+      <img src="images/batman.jpg" alt="">
+    </div>
+  </div>
+</section>
+
+<section id="slider2">
+  <div id="slider2Box">
+    <div id="bg">
+      <div id="mianBox">
+        <div id="imgBox">
+          <img src="images/foto3.jpg" alt="" height="100%" width="100%">
+          <img src="images/foto4.jpg" alt="" height="100%" width="100%">
+          <img src="images/foto1.jpg" alt="" height="100%" width="100%">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="hoverEffect2">
+  <h1>fajnetło - jakiestytuł</h1>
+  <div id="hoverEffect2Box">
+    <div id="hover2">
+      <div id="bgimg"></div>
+      <div id="text">OUT OF CONTROL</div>
+    </div>
+  </div>
+</section>
+
+<section id="slider4">
+  <div id="slider4Box">
+    <div id="mainbox">
+      <div id="imgbox">
+        <img src="/images/foto1.jpg" alt="">
+          <img src="/images/foto2.jpg" alt="">
+            <img src="images/foto3.jpg" alt="">
+            <img src="images/foto4.jpg" alt="">
+            <img src="images/foto5.jpg" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="tooltips2">
+  <div id="tooltipsBox">
+    <div id="mainTool">
+      <div id="border"></div>
+      <div id="tooltip2">
+        <div id="bigcircle"></div>
+        <h3>Batman</h3>
+        <h6>POLAND</h6>
+        <div id="rateBox">
+          <div id="heart">&#9829;</div>
+          <div id="rate">85%</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="PulseEffect">
+  <div id="PulseEffectBox">
+     <div id="effect">
+       <img src="/images/hand-ok-icon-5.png" alt="">
+     </div>
+     <div id="wave"></div>
+     <div id="wave2"></div>
+    
+  </div>
+</section>
 
 <script
   src="https://code.jquery.com/jquery-2.2.4.min.js"
   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
   crossorigin="anonymous"></script>
-  
+<!--<script src="js/jquery.min.js"></script> -->
 <script src="js/naukaCSS.js"></script> 
  
 </body>

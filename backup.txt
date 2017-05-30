@@ -1,0 +1,112 @@
+.buttonx{
+  background: linear-gradient(45deg, #f50000 0%,#fa9393 100%);
+  box-sizing: border-box;
+  
+  #buttonxBox {
+    .part{
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      padding: 30px;
+      width: 50%;
+      #btn{
+        width:100px;
+        height: 40px;
+        background-color: #a6a6c4;
+        outline: none;
+        border: none;
+        font-size: 0.7em;
+        border-radius: 5px;
+        font-family: monospace;
+        position: relative;
+        overflow: hidden;
+        &:before{
+          display: inline-block;
+          content: 'SEND';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+          transition: all 0.4s;
+          color: white;
+        } 
+        &:hover:before{
+          left: 170%;
+        }
+        &:after{
+          display: inline-block;
+          width: 30px;
+          height: 30px;
+          background: url(../images/Mail-Send-icon.png);
+          content: '';
+          background-size: 100%;
+          position: absolute;
+          top: 17%;
+          left: -128%;
+          transition: all 0.3s;
+          
+        }
+        &:hover:after{
+          left: 50%;
+          transform: translate(-50%,0);
+          
+        }
+      }
+      #btn2{
+        width: 100px;
+        height: 40px;
+        outline: none;
+        border: 1px solid #ee3769;
+        font-size: 0.7em;
+        border-radius: 5px;
+        font-family: monospace;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color:#ee3769;
+        background: transparent;
+        overflow: hidden;
+        p{
+          position: relative;
+          transition: all 0.5s ease;
+          left: -15px;
+          font-size: 1.3em;
+//          top: 50%;
+//          left: 50%;
+//          transform: translate(-50%,-50%);
+        }
+        img{
+          width: 30px;
+          height: 30px;
+          position: relative;
+          left: -100px;
+          transition: all 0.5s ease;
+        }
+        .icon{
+          width: 30px;
+          height: 30px;
+          position: relative;
+          left: -100px;
+          transition: all 0.5s ease;
+          background: url(/images/Mail-Send-icon.png);
+          background-size: cover;
+        }
+        &:hover{
+          p{
+            left: 100px;
+            
+          }
+          .icon{
+            left: 20px;
+          }
+//          img{
+//            left: 10px;
+//          }
+        }
+      }
+    }
+  }
+}

@@ -128,39 +128,982 @@ table {
   border-spacing: 0;
 }
 body {
-  background: #6077d9;
   font-size: 20px;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+.fixed-nav nav {
+  position: fixed;
+  box-shadow: 0 5px 10px black;
+  top: 0;
+  margin-bottom: 50px;
+}
+.fixed-nav nav #logo {
+  max-width: 500px;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  background: #2c90bc;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #ccf80f;
+}
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  border-color: #ff0000;
 }
 header {
-  width: 60%;
-  margin: 0 auto;
-  padding: 30px;
-  border: 20px solid white;
-  text-align: center;
+  background: url(../images/foto3.jpg) no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
 }
 header h1 {
-  font-size: 30px;
-  padding: 30px 0;
+  color: aliceblue;
+  font-weight: bold;
+  font-size: 3em;
 }
-header p {
-  margin: 30px 0;
-}
-#testy {
+nav {
+  background: #1c1c1c;
+  transition: all .5s;
+  width: 100%;
+  z-index: 1;
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+nav #logo {
+  font-size: 2em;
+  text-shadow: 4px 2px 10px red;
+  max-width: 0;
+  margin: 0 30px;
+  color: white;
+  transition: all 1s;
+  overflow: hidden;
+}
+nav .mainList {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+nav .mainPoint {
+  padding: 20px 30px;
+  position: relative;
+  width: 180px;
+  text-align: center;
+  text-transform: uppercase;
+}
+nav .mainPoint:hover ul {
+  display: block;
+}
+nav .mainPoint ul {
+  background: #1c1c1c;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  display: none;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  width: 180px;
+  text-transform: capitalize;
+  transition: all 0.5s ease;
+}
+nav ul {
+  list-style-type: none;
+}
+nav a {
+  text-decoration: none;
+  color: white;
+  padding: 20px 30px;
+  display: inline-block;
+}
+nav a:hover {
+  background: white;
+  color: black;
+}
+#buttonEffect {
+  text-align: center;
+  margin: 50px auto;
+}
+#buttonEffect .button {
+  position: relative;
+  padding: 20px 30px;
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 1em;
+}
+#buttonEffect .type1 {
+  color: #566473;
+}
+#buttonEffect .type1::after,
+#buttonEffect .type1::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  border: 2px solid;
+  transition: all 0.6s ease;
+  border-radius: 2px;
+}
+#buttonEffect .type1::after {
+  bottom: 0;
+  right: 0;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-right-color: #566473;
+  border-bottom-color: #566473;
+}
+#buttonEffect .type1::before {
+  top: 0;
+  left: 0;
+  border-top-color: #566473;
+  border-left-color: #566473;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+}
+#buttonEffect .type1:hover::before,
+#buttonEffect .type1:hover::after {
+  width: 100%;
+  height: 100%;
+}
+#buttonEffect .type2 {
+  color: #16a085;
+  transition: all 0.3s ease;
+}
+#buttonEffect .type2::before,
+#buttonEffect .type2::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #16a085;
+  transition: all 0.3s ease;
+  transform: scale(0.85);
+}
+#buttonEffect .type2:hover::before {
+  top: 0;
+  transform: scale(1);
+}
+#buttonEffect .type2:hover::after {
+  transform: scale(1);
+}
+#buttonEffect .type3 {
+  color: #566473;
+}
+#buttonEffect .type3::after,
+#buttonEffect .type3::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  border: 2px solid;
+  transition: all 0.6s ease;
+  border-radius: 2px;
+}
+#buttonEffect .type3::after {
+  bottom: 0;
+  right: 0;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: #566473;
+  border-right-color: #566473;
+}
+#buttonEffect .type3::before {
+  top: 0;
+  left: 0;
+  border-top-color: #566473;
+  border-left-color: #566473;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+}
+#buttonEffect .type3:hover::after,
+#buttonEffect .type3:hover::before {
+  border-top-color: #566473;
+  border-left-color: #566473;
+  border-bottom-color: #566473;
+  border-right-color: #566473;
+  width: 100%;
+  height: 100%;
+}
+#blurEffect h1 {
+  text-align: center;
+  font-size: 40px;
+}
+#blurEffect #blurEffectBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+#blurEffect #blurEffectBox .controls {
+  margin: 30px auto;
+}
+#blurEffect #blurEffectBox img {
+  background: #ffc600;
+  padding: 10px;
+}
+canvas {
+  margin: 50px auto;
+  border: 10px black solid;
+  display: block;
+}
+#flexGalleryPanel .box {
+  display: flex;
+  overflow: hidden;
+  min-height: 90vh;
+}
+#flexGalleryPanel .box .slajd {
+  background: #eb3b3b;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: all .8s;
+  box-shadow: inset 0px 0px 0px 15px rgba(255, 255, 255, 0.21);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#flexGalleryPanel .box .slajd p {
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1.5s ease;
+  font-size: 1.5em;
+  text-align: center;
+  color: white;
+}
+#flexGalleryPanel .box .slajd p:first-child {
+  transform: translateY(-200%);
+}
+#flexGalleryPanel .box .slajd p:last-child {
+  transform: translateY(200%);
+}
+#flexGalleryPanel .box .open {
+  flex: 5;
+}
+#flexGalleryPanel .box .open > * {
+  transform: translateY(0) !important;
+  font-size: 4em!important;
+}
+#flexGalleryPanel .box .bg1 {
+  background: url(../images/foto1.jpg) no-repeat;
+  background-size: cover;
+}
+#flexGalleryPanel .box .bg2 {
+  background: url(../images/foto2.jpg) no-repeat;
+  background-size: cover;
+}
+#flexGalleryPanel .box .bg3 {
+  background: url(../images/foto3.jpg) no-repeat;
+  background-size: cover;
+}
+#flexGalleryPanel .box .bg4 {
+  background: url(../images/foto4.jpg) no-repeat;
+  background-size: cover;
+}
+#flexGalleryPanel .box .bg5 {
+  background: url(../images/foto5.jpg) no-repeat;
+  background-size: cover;
+}
+#ParallaxEffect h1 {
+  font-size: 50px;
+  margin: 0;
+}
+#ParallaxEffect h2 {
+  text-align: center;
+  font-size: 40px;
+}
+#ParallaxEffect #box1,
+#ParallaxEffect #box2,
+#ParallaxEffect #box3 {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+#ParallaxEffect #box1 {
+  background-image: url(../images/foto1.jpg);
+}
+#ParallaxEffect #box2 {
+  background-image: url(../images/foto2.jpg);
+}
+#ParallaxEffect #box3 {
+  background-image: url(../images/foto4.jpg);
+}
+#shadowBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto;
+}
+#shadowBox #mainShadow {
+  width: 300px;
+  height: 200px;
+  background: #444;
+  border-radius: 5px;
+}
+#shadowBox #mainShadow img {
+  width: 70%;
+  height: 80%;
+  margin-left: 15%;
+  margin-top: 5%;
+}
+#shadowBox #mainShadow #shadoww {
+  height: 4px;
+  background: #000;
+  width: 95%;
+  margin: 40px auto;
+  filter: blur(5px);
+  border-radius: 50%;
+}
+#loadingBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 150px auto;
+  position: relative;
+}
+#loadingBox #text {
+  font-size: 65px;
+}
+#loadingBox #circle1,
+#loadingBox #circle2,
+#loadingBox #circle3 {
+  width: 30px;
+  height: 30px;
+  background: #000;
+  border-radius: 50%;
+  margin: 0 10px;
+  position: absolute;
+  top: 17px;
+}
+#loadingBox #circle1 {
+  left: 61%;
+  animation: move 4s infinite linear;
+}
+#loadingBox #circle2 {
+  left: 64%;
+  animation: move 4.2s infinite linear;
+}
+#loadingBox #circle3 {
+  left: 67%;
+  animation: move 4.4s infinite linear;
+}
+@keyframes move {
+  0% {
+    background-color: #000;
+    top: 17px;
+  }
+  20% {
+    background-color: #ff0000;
+    top: -17px;
+  }
+  40% {
+    background-color: #3b00ff;
+    top: 17px;
+  }
+  60% {
+    background-color: #38f20c;
+    top: -17px;
+  }
+  80% {
+    background-color: #c4ff01;
+    top: 17px;
+  }
+  90% {
+    background-color: #00ffff;
+    top: -17px;
+  }
+  100% {
+    background-color: #ff00ff;
+    top: 17px;
+  }
+}
+#roundHoverBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#roundHoverBox #circle {
+  background: url(../images/foto1.jpg);
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 10px rgba(255, 255, 255, 0.17);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#roundHoverBox #circle:hover #textHover {
+  width: 90%;
+  height: 90%;
+  color: azure;
+}
+#roundHoverBox #circle #textHover {
+  font-size: 2em;
+  color: transparent;
+  background: #4b4b4b;
+  width: 0%;
+  height: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: width 0.5s ease, height 0.5s ease, color 0.6s ease;
+  text-transform: uppercase;
+}
+#button3dBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, #d81b60 0%, #ef823d 100%);
+  height: 250px;
+}
+#button3dBox a {
+  text-decoration: none;
+  font-size: 1.5em;
+  color: aliceblue;
+  background: #3ad1f5;
+  padding: 10px 60px;
+  font-family: sans-serif;
+  border-radius: 60px;
+  box-shadow: 0px 4px 0 0 #b4b4b4;
+  transition: all 0.1s;
+  position: relative;
+}
+#button3dBox a:active {
+  top: 3px;
+  box-shadow: 0 0 0 0 #000;
+  transition: all 0.3s;
+}
+#circleButton {
+  background: linear-gradient(45deg, #313131 0%, #000000 100%);
+  position: relative;
+  height: 200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.circleButtonBox {
+  display: flex;
+  position: relative;
+}
+.circleButtonBox .superButton {
+  width: 150px;
+  height: 50px;
+  font-family: monospace;
+  color: #ee3769;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  border: 2px solid #ee3769;
+  text-align: center;
+  line-height: 50px;
+  overflow: hidden;
+  transition: color 0.3s ease-out;
+}
+.circleButtonBox .superButton:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  content: "";
+  border-radius: 50%;
+  display: block;
+  width: 300px;
+  height: 300px;
+  left: -75px;
+  transition: box-shadow 0.6s ease-out;
+  z-index: -1;
+}
+.circleButtonBox .superButton:hover {
+  color: #fff;
+}
+.circleButtonBox .superButton:hover::before {
+  box-shadow: inset 0 0 0 160px #ee3769;
+}
+.circleButtonBox .superButton2 {
+  color: #ee3769;
+  font-family: monospace;
+  width: 150px;
+  padding: 15px;
+  border: 2px solid #ee3769;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  transition: all 0.5s;
+}
+.circleButtonBox .superButton2:after {
+  content: "";
+  width: 0px;
+  height: 120%;
+  position: absolute;
+  left: -10%;
+  bottom: 0;
+  background: #ee3769;
+  transform: skewX(15deg);
+  z-index: -1;
+  transition: .5s;
+}
+.circleButtonBox .superButton2:hover {
+  cursor: pointer;
+  color: white;
+}
+.circleButtonBox .superButton2:hover:after {
+  width: 120%;
+}
+.circleButtonBox .superButton3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ee3769;
+  padding: 15px;
+  border: 2px solid #ee3769;
+  width: 150px;
+  text-align: center;
+  outline: 1px solid rgba(238, 55, 105, 0.71);
+  transition: all .7s;
+}
+.circleButtonBox .superButton3:hover {
+  text-shadow: 0 0 20px #ee3769;
+  box-shadow: inset 0 0 50px rgba(238, 55, 105, 0.19), 0 0 50px rgba(238, 55, 105, 0.28);
+  outline-color: rgba(238, 55, 105, 0.8);
+}
+.circleButtonBox .superButton4 {
+  width: 150px;
+  height: 50px;
+  outline: none;
+  border: 2px solid #ee3769;
+  font-size: 1em;
+  font-family: monospace;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ee3769;
+  background: transparent;
+  overflow: hidden;
+}
+.circleButtonBox .superButton4 p {
+  position: relative;
+  transition: all 0.5s ease;
+  left: -25px;
+  font-size: 1.3em;
+}
+.circleButtonBox .superButton4 .icon {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  top: 12px;
+  left: -100px;
+  transition: all 0.5s ease;
+  background: url(../images/sendMail.png) no-repeat;
+  background-size: contain;
+}
+.circleButtonBox .superButton4:hover p {
+  left: 100px;
+}
+.circleButtonBox .superButton4:hover .icon {
+  left: 25px;
+}
+#switchOnBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: -webkit-linear-gradient(320deg, #395dbf 0%, #2a2ad9 100%);
+  background: -o-linear-gradient(320deg, #395dbf 0%, #2a2ad9 100%);
+  background: linear-gradient(50deg, #395dbf 0%, #2a2ad9 100%);
+  height: 200px;
+}
+#switchOnBox #mainSwitch {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  text-align: center;
+}
+#switchOnBox #mainSwitch input {
+  position: absolute;
+}
+#switchOnBox #mainSwitch input:checked + #custom {
+  background: #83b1f4;
+}
+#switchOnBox #mainSwitch input:checked + #custom #circle {
+  background-color: #4285f4;
+  left: 22px;
+}
+#switchOnBox #mainSwitch #custom {
+  width: 40px;
+  height: 14px;
+  background: rgba(0, 0, 0, 0.49);
+  display: inline-block;
+  border-radius: 14px;
+  position: relative;
+  transition: all 0.3s;
+}
+#switchOnBox #mainSwitch #custom #circle {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -3px;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.39);
+  border-radius: 20px;
+}
+#stackCardBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(25deg, #e5b253, orange);
+  height: 400px;
+}
+#cards {
+  width: 250px;
+  height: 350px;
+  box-shadow: 1px 1px 1px white, 2px 2px 1px white, 3px 3px 1px grey, 4px 4px 1px white, 5px 5px 1px white, 6px 6px 1px grey, 7px 7px 1px white, 8px 8px 1px white, 9px 9px 1px white, 10px 10px 1px grey, 11px 11px 1px white, 12px 11px 1px white, 13px 13px 1px grey, 25px 25px 15px rgba(0, 0, 0, 0.27);
+}
+#cards img {
+  width: 100%;
+  height: 100%;
+}
+#slider2 {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+#slider2Box {
+  width: 250px;
+  height: 350px;
+  position: absolute;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#slider2Box #imgBox {
+  width: 300%;
+  position: relative;
+  left: 0;
+  animation: sliderMove 10s infinite;
+}
+#slider2Box #imgBox img {
+  width: 33.33%;
+  float: left;
+}
+@keyframes sliderMove {
+  0% {
+    left: 0;
+  }
+  25% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  75% {
+    left: -100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+#hoverEffect2 {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 800px;
+}
+#hover2 {
+  height: 70vh;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#hover2 #bgimg {
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/astronomy.jpg);
+  background-size: 100% 100%;
+  background-position: center;
+  transform: rotateY(180deg);
+  transition: all 3s ease-in-out;
+  position: absolute;
+}
+#hover2 #text {
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/astronomy.jpg);
+  background-size: 100% 100%;
+  background-position: center;
+  font-size: 7em;
+  font-weight: bold;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: all 3s ease-in-out;
+}
+#hover2:hover #text {
+  background-size: 80% 80%;
+}
+#hover2:hover #bgimg {
+  background-size: 130% 130%;
+}
+#slider4Box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#mainbox {
+  width: 1000px;
+  height: 625px;
+  overflow: hidden;
+  border: 20px solid white;
+}
+#mainbox #imgbox {
+  display: flex;
+  position: relative;
+  left: 0;
+  animation: movee 20s infinite linear alternate;
+}
+#mainbox #imgbox img {
+  width: 100%;
+  height: 100%;
+  float: left;
+}
+@keyframes movee {
+  0% {
+    left: 0%;
+  }
+  25% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  75% {
+    left: -300%;
+  }
+  100% {
+    left: -400%;
+  }
+}
+#tooltips2 {
+  background: linear-gradient(45deg, #f75757 0%, #ff0000 100%);
+  width: 100%;
+  height: 700px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#tooltipsBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto;
+  position: relative;
+  background: linear-gradient(45deg, #f75757 0%, #ff0000 100%);
+}
+#tooltipsBox #mainTool {
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+  background-image: url(../images/batman.jpg);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+#tooltipsBox #mainTool #border {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.1);
+  border: 2px dashed black;
+  border-radius: 50%;
+}
+#tooltipsBox #mainTool:hover #border {
+  animation: borderRotate 3s infinite linear;
+}
+#tooltipsBox #mainTool:hover #tooltip2 {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  visibility: visible;
+}
+@keyframes borderRotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg) scale(1.1);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg) scale(1.1);
+  }
+}
+#tooltipsBox #mainTool #tooltip2 {
+  height: 220px;
+  width: 170px;
+  background-color: whitesmoke;
+  box-shadow: 0 0 5px silver;
+  position: absolute;
+  top: 250%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 5px;
+}
+#tooltipsBox #mainTool #tooltip2:before {
+  content: '\25b2';
+  font-size: 20px;
+  color: whitesmoke;
+  position: absolute;
+  top: -7px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#tooltipsBox #mainTool #tooltip2 #bigcircle {
+  height: 75px;
+  width: 75px;
+  margin: 0 10px 0 0;
+  border-radius: 50%;
+  background-image: url(../images/sendMail.png);
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#tooltipsBox #mainTool #tooltip2 h3 {
+  font-weight: bold;
+  font-size: 22px;
+}
+#tooltipsBox #mainTool #tooltip2 h3,
+#tooltipsBox #mainTool #tooltip2 h6 {
+  text-align: center;
+  color: grey;
+}
+#tooltipsBox #mainTool #tooltip2 h6 {
+  font-size: 14px;
+  margin: 10px;
+}
+#tooltipsBox #mainTool #tooltip2 #rateBox {
+  display: flex;
   justify-content: space-around;
 }
-#testy .box {
-  width: 100px;
-  height: 100px;
-  background: #5f378e;
-  display: flex;
-  text-align: center;
-  align-items: center;
-  color: aliceblue;
-  margin: 20px;
+#tooltipsBox #mainTool #tooltip2 #heart {
+  color: red;
+  font-size: 30px;
+  margin: 10px;
 }
-#testy .box:hover {
-  background: white;
-  color: #5f378e;
+#tooltipsBox #mainTool #tooltip2 #rate {
+  color: grey;
+  margin: 15px;
+}
+#PulseEffectBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 50px 0;
+  background: linear-gradient(78deg, #354484, #192c80);
+}
+#effect {
+  width: 305px;
+  height: 305px;
+  border-radius: 50%;
+  background-color: #3d4ed3;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+#effect:hover {
+  cursor: pointer;
+}
+#effect:hover ~ #wave {
+  animation: pulse 2s infinite linear;
+}
+#effect:hover ~ #wave2 {
+  animation: pulse2 2s infinite linear;
+}
+#wave,
+#wave2 {
+  width: 300px;
+  height: 300px;
+  background-color: white;
+  position: absolute;
+  border-radius: 50%;
+  z-index: 1;
+}
+@keyframes pulse {
+  from {
+    transform: scale(0.5);
+    opacity: 0.4;
+  }
+  to {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+@keyframes pulse2 {
+  from {
+    transform: scale(0);
+    opacity: 0.6;
+  }
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
 }

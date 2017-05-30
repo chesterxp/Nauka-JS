@@ -1312,6 +1312,10 @@ body {
   background: red;
   height: 3px;
 }
+#nextClock .clock2 .clock-face .hour-hand {
+  width: 35%;
+  left: 15%;
+}
 #nextClock .clock2 .clock-face .sign {
   border: 10px solid #222e45;
   border-radius: 50%;

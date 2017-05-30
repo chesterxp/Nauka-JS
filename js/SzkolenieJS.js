@@ -564,14 +564,11 @@ var manageList = function(string){
     list = null;
   }
 };
-
 var onType = function(){
   manageList(this.value);
 };
 
-
 helpInput.addEventListener('keyup',onType)
-
 
 //-----------------------nextClock -----------------------
 var secondHand = document.querySelector('.second-hand');
@@ -580,20 +577,18 @@ var hourHand = document.querySelector('.hour-hand');
 
 function setDate(){
   var now = new Date();
+  
   var second = now.getSeconds();
   var secondsDegrees = second*6+90;
   secondHand.style.transform = 'rotate('+secondsDegrees+'deg)';
   
   var min = now.getMinutes();
-  
   var minDegrees  = min*6+90;
   minHand.style.transform = 'rotate('+minDegrees+'deg)';
   
   var hour = now.getHours();
   var hourDegrees  = (min*0.5)+hour*30+90;
   hourHand.style.transform = 'rotate('+hourDegrees+'deg)';
-  
-  console.log(hourDegrees);
 }
 
 setInterval(setDate,1000);
