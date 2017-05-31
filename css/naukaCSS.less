@@ -95,8 +95,6 @@ header{
     font-weight: bold;
     font-size: 3em;
   }
-  
-  
 }
 nav{
   background: #1c1c1c;
@@ -1019,10 +1017,9 @@ canvas{
   
 
 #PulseEffectBox{
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
+  width: 100%;
+  height: 500px;
   padding:50px 0;
   background: linear-gradient(78deg, #354484,#192c80);
 }
@@ -1032,9 +1029,9 @@ canvas{
   border-radius: 50%;
   background-color: #3d4ed3;
   position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
   position: relative;
   z-index: 2;
   &:hover{
@@ -1043,29 +1040,244 @@ canvas{
   &:hover ~ #wave{
     animation: pulse 2s infinite linear;
   }
-  
   &:hover ~ #wave2{
     animation: pulse2 2s infinite linear;
   }
-//  position: absolute;
-//  top: 50%;
-//  left: 50%;
-//  transform: translate(-50%,-50%);
 }
 #wave, #wave2{
   width: 300px;
   height: 300px;
   background-color: white;
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
   border-radius: 50%;
   z-index: 1;
   
 }
 @keyframes pulse{
-  from{transform: scale(0.5); opacity: 0.4; }
-  to{transform:  scale(3); opacity: 0; }
+  from{transform: translate(-50%,-50%) scale(0.5); opacity: 0.4; }
+  to{transform:  translate(-50%,-50%) scale(3); opacity: 0; }
 }
 @keyframes pulse2{
-  from{transform: scale(0); opacity: 0.6; }
-  to{transform:  scale(2); opacity: 0; }
+  from{transform: translate(-50%,-50%) scale(0); opacity: 0.6; }
+  to{transform:  translate(-50%,-50%) scale(2); opacity: 0; }
 }
+
+
+#PulseEffect2{
+  width: 100%;
+  height: 500px;
+  background: radial-gradient(circle, #79f082, #27fc00);
+  #PulseEffectBox2{
+    padding: 100px 0;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);    
+  }
+}
+#effect2{
+  background: #3d4ae6;
+  width: 310px;
+  height: 310px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 0 0 20px black;
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  &:hover ~ #wwave{
+      animation: pulse3 1s infinite linear;
+  }
+  &:hover ~ #wwave2{
+      animation: pulse4 1s infinite linear;
+  }
+  &:hover ~ #wwave3{
+      animation: pulse5 1s infinite linear;
+  }  
+}
+#wwave, #wwave2, #wwave3{
+  z-index: 1;
+  width: 300px;
+  height: 300px;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+@keyframes pulse3{
+  from{
+    transform: translate(-50%,-50%) scale(1.1); opacity: 0.4;
+  }
+  to{
+    transform: translate(-50%,-50%) scale(2); opacity: 0.0;
+  }
+}
+@keyframes pulse4{
+  from{
+    transform: translate(-50%,-50%) scale(1); opacity: 0.6;
+  }
+  to{
+    transform: translate(-50%,-50%) scale(1.5); opacity: 0.0;
+  }
+}
+@keyframes pulse5{
+  from{
+    transform: translate(-50%,-50%) scale(1.2); opacity: 0.8;
+  }
+  to{
+    transform: translate(-50%,-50%) scale(2.5); opacity: 0.0;
+  }
+}
+
+
+#flipper{
+  background: linear-gradient(105deg, #bf7f56, #f26c09);
+  height: 500px;
+  position: relative;
+  
+  #flipperBox{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+  }
+}
+#mainFlipper{
+    width: 215px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    perspective: 800px;
+    display: flex;
+  #msg{
+    font-family: sans-serif;
+    display: inline-block;
+    font-size: 35px;
+    line-height: 26px;
+    text-align: right;
+    font-weight: bold;
+  }
+  #box{
+      width: 100%;
+      margin-left: 20px;
+      transform-style:preserve-3d;
+      animation: rotate 10s infinite ease-in-out;
+
+    
+    #side1, #side2, #side3, #side4{
+      position: absolute;
+      width: 100%;
+      height: 50px;
+      color: white;
+      text-align: center;
+      line-height: 50px;
+      font-size: 20px;
+      background-color: #e0513a;
+      
+    }
+    #side1{
+      transform: translateZ(50px);
+    }
+    #side2{
+      transform: rotateY(-90deg) translateX(-50px);
+      transform-origin: left;
+    }
+    #side3{
+      transform: rotateY(180deg) translateZ(50px);
+
+    }
+    #side4{
+      font-size: 30px;
+      transform: rotateY(90deg) translateX(50px);
+      transform-origin: right;
+    }
+    
+    }
+  
+  @keyframes rotate {
+    0%{transform: rotateY(0);}
+    25%{transform: rotateY(90deg);}
+    50%{transform: rotateY(180deg);}
+    75%{transform: rotateY(270deg);}
+    100%{transform: rotateY(360deg);}
+  }
+  
+}
+
+#smoothScroll{
+//  background: linear-gradient(20deg, #ff5656, #fd1527);
+//  width: 100%;
+//  height: 500px;
+  #boxx1, #boxx2, #boxx3, #boxx4{
+    height: 100vh;
+    width: 100%;
+    font-size: 60px;
+    line-height: 100vh;
+    text-align: center;
+  }
+  #boxx1{
+    background: aqua;
+  }
+  #boxx2{
+    background: #ceff00;
+  }
+  #boxx3{
+    background: #ff0000;
+  }
+  #boxx4{
+    background: #00ff0a;
+  }
+  #menu{
+    position: relative;
+    top: 125px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    #leftOption, #rightOption{
+      height: 30px;
+      width: 40%;
+      background-color: #222;
+      display: flex;
+      justify-content: space-around;
+      a{
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+      }
+    }
+    #leftOption{
+      float: left;
+      border-radius: 0 20px 20px 0;
+    }
+    #rightOption{
+      float: right;
+      border-radius: 20px 0 0 20px;
+    }
+    #logo{
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+      background-color: #222;
+      float: left;
+      text-align: center;
+      font-size: 20px;
+      color: white;
+      line-height: 100px;
+      
+    }
+  }
+}
+

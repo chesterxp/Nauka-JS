@@ -3,7 +3,7 @@
 var nav = document.querySelector('#main');
 var topOfNav = nav.offsetTop;//granica od gory elementu nav w px
 function fixNav(){
-  console.log(topOfNav, window.scrollY);
+  //console.log(topOfNav, window.scrollY);
   if(window.scrollY >= topOfNav){
     document.body.style.paddingTop = nav.offsetHeight+"px";
     document.body.classList.add('fixed-nav');
@@ -126,6 +126,31 @@ button3d.addEventListener('click',function(e){
 
 
 
+//-------------Smooth Scroll ------------------
+
+$('#link1').click(function(){
+  $path=$("#boxx1").offset().top;
+  console.log('watrosc path'+ $path);
+  $('body').animate({scrollTop:$path},1000);
+});
+
+$('#link2').click(function(){
+  $path=$("#boxx2").offset().top;
+  console.log('watrosc path'+ $path);
+  $('body').animate({scrollTop:$path},1000);
+});
+
+$('#link3').click(function(){
+  $path=$("#boxx3").offset().top;
+  console.log('watrosc path'+ $path);
+  $('body').animate({scrollTop:$path},1000);
+});
+
+$('#link4').click(function(){
+  $path=$("#boxx4").offset().top;
+  console.log('watrosc path'+ $path);
+  $('body').animate({scrollTop:$path},1000);
+});
 
 
 
