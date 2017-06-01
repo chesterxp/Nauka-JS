@@ -217,3 +217,135 @@ $('#rightarrow2').mouseup(function(){
   $(this).css('box-shadow','0px 3px 1px grey');
 });
 
+var flag = 1;
+$('#next').click(function(){
+  if (flag==0){
+    $("#sidee1").css("z-index","999");
+    $("#sidee2").css("z-index","9");
+    $("#sidee3").css("z-index","9");
+    $("#sidee1").css("transform","translateX(0px) scale(1.5)");
+    $("#sidee2").css("transform","translateX(-100px) scale(1)");
+    $("#sidee3").css("transform","translateX(100px)");
+    flag=1;
+  }
+  else if(flag==1){
+    $("#sidee3").css("z-index","999");
+    $("#sidee2").css("z-index","9");
+    $("#sidee1").css("z-index","9");
+    $("#sidee3").css("transform","translateX(0px) scale(1.5)");
+    $("#sidee1").css("transform","translateX(-100px) scale(1)");
+    $("#sidee2").css("transform","translateX(100px)");
+            flag=2;
+  }
+  else if(flag==2){
+    $("#sidee2").css("z-index","999");
+    $("#sidee3").css("z-index","9");
+    $("#sidee1").css("z-index","9");
+    $("#sidee2").css("transform","translateX(0px) scale(1.5)");
+    $("#sidee3").css("transform","translateX(-100px) scale(1)");
+    $("#sidee1").css("transform","translateX(100px)");
+    flag=0;
+  }
+});
+
+$('#pre').click(function(){
+  if (flag==0){
+    $("#sidee3").css("z-index","999");
+    $("#sidee2").css("z-index","9");
+    $("#sidee1").css("z-index","9");
+    $("#sidee3").css("transform","translateX(0px) scale(1.5)");
+    $("#sidee1").css("transform","translateX(-100px) scale(1)");
+    $("#sidee2").css("transform","translateX(100px)");
+    flag=2;
+  }
+  else if(flag==1){
+    $("#sidee2").css("z-index","999");
+    $("#sidee3").css("z-index","9");
+    $("#sidee1").css("z-index","9");
+    $("#sidee2").css("transform","translateX(0px) scale(1.5)");
+    $("#sidee3").css("transform","translateX(-100px) scale(1)");
+    $("#sidee1").css("transform","translateX(100px)");
+    flag=0;
+  }
+  else if (flag==2){
+    $("#sidee1").css("z-index","999");
+    $("#sidee2").css("z-index","9");
+    $("#sidee3").css("z-index","9");
+    $("#sidee1").css("transform","translateX(0px) scale(1.5)");
+    $("#sidee2").css("transform","translateX(-100px) scale(1)");
+    $("#sidee3").css("transform","translateX(100px)");
+    flag=1;
+  }
+});
+
+
+//$('#next').click(function(){
+//  $('#sidee1').css('z-index','999').css("transform","translateX(0px) scale(1.5)").next().css()
+//});
+
+//$('.kwa').click(function(){
+//  $(this).css('transform','scale(1.3)')
+//    .next().css('transform','scale(1)');
+//});
+//
+//$('.kwa').click(function(){
+//  $(this).css('transform','scale(1.3)')
+//    .prev().css('transform','scale(1)');
+//});
+
+//$('.kwa').click(function(){
+//  $(this).addClass('big');
+//});
+
+function currentTranslateValue(data){
+  var mm = data.css('transform');
+  var pozycja = mm[19]+mm[20]+mm[21];
+  var liczba = parseInt(pozycja);
+  return liczba;
+  
+
+//  for (var i = 0;i<mm.length;i++){
+//    console.log(mm[i]);
+//    
+//  }
+  var pozycja = mm[19]+mm[20]+mm[21];
+  var liczba = parseInt(pozycja);
+}
+  var baza = $('.kwa');
+  var active2 = $('.ss3');
+  var currentTranslateValue = active2.css("transform");
+  baza.click(function(){
+    if (active2.hasClass('big')){
+      active2.removeClass('big');
+    }
+    active2 = $(this).addClass('big');
+//    active2.css('transform','translate('+trans+')');
+    
+  });
+  baza.dblclick(function(){
+    $(this).removeClass('big');
+  });
+
+
+$('#woda').click(function(){
+  
+  $(this).css('border','2px solid red');
+  var mm = $(this).css('transform');
+  console.log('transs ' + mm);
+
+//  for (var i = 0;i<mm.length;i++){
+//    console.log(mm[i]);
+//    
+//  }
+  var pozycja = mm[19]+mm[20]+mm[21];
+  var liczba = parseInt(pozycja);
+  $('#matrix').html("dddd"+ liczba);
+
+});
+
+
+//var xxx = getTranslateXValue(trans);
+//console.log(xxx);
+//
+//var cc = mm.split(',');
+//console.log(cc);

@@ -1502,3 +1502,123 @@ canvas {
 #mainCard2 #clicker2 #counter2 {
   color: #6a6464;
 }
+#cardSlider {
+  background: linear-gradient(30deg, #b4b4b4, #d4d4d4);
+  height: 500px;
+  position: relative;
+}
+#cardSlider #pre,
+#cardSlider #next {
+  width: 100px;
+  height: 30px;
+  border: 2px solid grey;
+  font-size: 15px;
+  color: grey;
+  text-align: center;
+  line-height: 30px;
+  position: absolute;
+  top: 50%;
+}
+#cardSlider #pre:hover,
+#cardSlider #next:hover {
+  cursor: pointer;
+}
+#cardSlider #pre {
+  left: 20%;
+}
+#cardSlider #next {
+  right: 20%;
+}
+#cardSlider #main {
+  position: absolute;
+  top: 35%;
+  left: 45%;
+}
+#cardSlider #main #sidee1 {
+  width: 150px;
+  height: 250px;
+  position: absolute;
+  transform: translateX(0px) scale(1.5);
+  z-index: 99;
+  border: 2px solid grey;
+  transition: all 0.5s;
+}
+#cardSlider #main #sidee2 {
+  width: 150px;
+  height: 250px;
+  position: absolute;
+  transform: translateX(-100px);
+  z-index: 9;
+  border: 2px solid grey;
+  transition: all 0.5s;
+}
+#cardSlider #main #sidee3 {
+  width: 150px;
+  height: 250px;
+  position: absolute;
+  transform: translateX(100px);
+  z-index: 9;
+  border: 2px solid grey;
+  transition: all 0.5s;
+}
+#s2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 500px;
+}
+#s2 #s2Box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex: 1;
+}
+#s2 .kwa {
+  width: 200px;
+  height: 200px;
+  background: #ff3b3b;
+  position: absolute;
+  top: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#s2 .big {
+  width: 160px;
+  height: 220px;
+  z-index: 10!important;
+  top: -10px;
+  box-shadow: 0 0 10px black;
+}
+#s2 .ss1 {
+  background: #ff0000;
+  z-index: 3;
+  left: 10%;
+}
+#s2 .ss2 {
+  background: #0000ff;
+  z-index: 2;
+  left: 30%;
+}
+#s2 .ss3 {
+  background: #00ff58;
+  z-index: 1;
+  left: 50%;
+}
+#s2 .ss4 {
+  background: #fce800;
+  z-index: 2;
+  left: 70%;
+}
+#s2 .ss5 {
+  background: #fc00df;
+  z-index: 1;
+  left: 90%;
+}
+#woda {
+  width: 300px;
+  height: 300px;
+  background: #19fcfc;
+  transform: translateX(50px);
+}
