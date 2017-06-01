@@ -1568,11 +1568,8 @@ canvas {
   height: 500px;
 }
 #s2 #s2Box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
-  flex: 1;
+  left: -800px;
 }
 #s2 .kwa {
   width: 200px;
@@ -1585,35 +1582,29 @@ canvas {
   align-items: center;
 }
 #s2 .big {
-  width: 160px;
-  height: 220px;
+  width: 200px;
+  height: 200px;
   z-index: 10!important;
-  top: -10px;
   box-shadow: 0 0 10px black;
 }
 #s2 .ss1 {
   background: #ff0000;
-  z-index: 3;
   left: 10%;
 }
 #s2 .ss2 {
   background: #0000ff;
-  z-index: 2;
   left: 30%;
 }
 #s2 .ss3 {
   background: #00ff58;
-  z-index: 1;
   left: 50%;
 }
 #s2 .ss4 {
   background: #fce800;
-  z-index: 2;
   left: 70%;
 }
 #s2 .ss5 {
   background: #fc00df;
-  z-index: 1;
   left: 90%;
 }
 #woda {
@@ -1621,4 +1612,49 @@ canvas {
   height: 300px;
   background: #19fcfc;
   transform: translateX(50px);
+  position: relative;
+}
+#wipeEffect {
+  position: relative;
+  width: 100%;
+  height: 800px;
+}
+#mainWipe {
+  height: 500px;
+  width: 1000px;
+  background-color: #faee98;
+  border: 5px solid black;
+  border-radius: 5px;
+  background: url(../images/car2.png);
+  background-size: 15% 35%;
+  background-repeat: no-repeat;
+  background-position: 95% 110%;
+  background-attachment: fixed;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#mainWipe #separator {
+  height: 500px;
+  width: 5px;
+  background-color: black;
+  position: absolute;
+  transform: translateY(-50px);
+  z-index: 999;
+  top: 50px;
+}
+#mainWipe #separator:hover {
+  cursor: e-resize;
+}
+#mainWipe #frame {
+  height: 500px;
+  width: 1000px;
+  background-color: #aa88df;
+  background-size: 15% 35%;
+  background-repeat: no-repeat;
+  background-position: 95% 110%;
+  background-attachment: fixed;
+  position: absolute;
+  right: 0;
 }

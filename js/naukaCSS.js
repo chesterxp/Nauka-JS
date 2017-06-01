@@ -278,70 +278,88 @@ $('#pre').click(function(){
   }
 });
 
-
+//
 //$('#next').click(function(){
 //  $('#sidee1').css('z-index','999').css("transform","translateX(0px) scale(1.5)").next().css()
 //});
 
-//$('.kwa').click(function(){
-//  $(this).css('transform','scale(1.3)')
-//    .next().css('transform','scale(1)');
-//});
-//
-//$('.kwa').click(function(){
-//  $(this).css('transform','scale(1.3)')
-//    .prev().css('transform','scale(1)');
-//});
-
-//$('.kwa').click(function(){
-//  $(this).addClass('big');
-//});
-
-function currentTranslateValue(data){
-  var mm = data.css('transform');
-  var pozycja = mm[19]+mm[20]+mm[21];
-  var liczba = parseInt(pozycja);
-  return liczba;
-  
-
-//  for (var i = 0;i<mm.length;i++){
-//    console.log(mm[i]);
-//    
-//  }
-  var pozycja = mm[19]+mm[20]+mm[21];
-  var liczba = parseInt(pozycja);
-}
-  var baza = $('.kwa');
-  var active2 = $('.ss3');
-  var currentTranslateValue = active2.css("transform");
-  baza.click(function(){
-    if (active2.hasClass('big')){
-      active2.removeClass('big');
-    }
-    active2 = $(this).addClass('big');
-//    active2.css('transform','translate('+trans+')');
-    
-  });
-  baza.dblclick(function(){
-    $(this).removeClass('big');
-  });
-
-
-$('#woda').click(function(){
-  
-  $(this).css('border','2px solid red');
-  var mm = $(this).css('transform');
-  console.log('transs ' + mm);
-
-//  for (var i = 0;i<mm.length;i++){
-//    console.log(mm[i]);
-//    
-//  }
-  var pozycja = mm[19]+mm[20]+mm[21];
-  var liczba = parseInt(pozycja);
-  $('#matrix').html("dddd"+ liczba);
-
+$('.kwa').click(function(){
+  $(this).css('transform','scale(1.3)')
+    .next().css('transform','scale(1)');
 });
+
+$('.kwa').click(function(){
+  $(this).css('transform','scale(1.3)')
+    .prev().css('transform','scale(1)');
+});
+
+$('.kwa').click(function(){
+  $(this).addClass('big');
+});
+
+//function currentTranslateValue(data){
+//  var mm = data.css('transform');
+//  var pozycja = mm[19]+mm[20]+mm[21];
+//  var liczba = parseInt(pozycja);
+//  return liczba;
+//  
+//
+////  for (var i = 0;i<mm.length;i++){
+////    console.log(mm[i]);
+////    
+////  }
+//  var pozycja = mm[19]+mm[20]+mm[21];
+//  var liczba = parseInt(pozycja);
+//}
+//
+//  var baza = $('.kwa');
+//  var active2 = $('.ss3');
+//  $('.kwa').click(function(){
+//    var mainActive = $('.ss3');
+//      
+//    
+//    //wyciągamy wartośc translate z this
+//    var mm = $(this).css('transform');
+////    console.log('baza '+mm);
+//    var pozycja = mm[19]+mm[20]+mm[21];
+//    var liczba = parseInt(pozycja);
+////    console.log(liczba);
+//    
+//    var mm2 = 300;
+////    var mm2 = mainActive.css('transform');
+//////    console.log('baza '+mm);
+////    var pozycja2 = mm[19]+mm[20]+mm[21];
+////    var liczba2 = parseInt(pozycja);
+//    //dodajemy klase do this
+//    if (active2.hasClass('big')){
+//      active2.removeClass('big');
+//    }
+//    
+//      active2 = $(this).addClass('big');
+//      active2.css('transform','translateX('+liczba2+')');
+//    
+//    console.log('klikniety ' + active2)
+//    //stary element dodstje translate z this
+//    mainActive.css('transform','translateX('+liczba+'px)');
+//    console.log('stary klikniety' + mainActive)
+//        
+//  });
+//
+//  baza.dblclick(function(){
+//    $(this).removeClass('big');
+//  });
+
+
+//$('#woda').click(function(){
+//  
+//  $(this).css('border','2px solid red');
+//  var mm = $(this).css('transform');
+//  console.log('transs ' + mm);
+//  var pozycja = mm[19]+mm[20]+mm[21];
+//  var liczba = parseInt(pozycja);
+//  $('#matrix').html("dddd"+ liczba);
+//
+//});
 
 
 //var xxx = getTranslateXValue(trans);
@@ -349,3 +367,16 @@ $('#woda').click(function(){
 //
 //var cc = mm.split(',');
 //console.log(cc);
+
+
+//------------wipeEffect-------------------
+
+
+$('#mainWipe').mousemove(function(e){
+  $val = e.clientX-185;
+  if($val<995 && $val>0){
+    $('#separator').css('left',$val);
+    $('#frame').css('width',1000-$val);
+    
+  }
+});
