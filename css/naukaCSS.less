@@ -1281,3 +1281,220 @@ canvas{
   }
 }
 
+#designCard{
+  background: linear-gradient(10deg, #f079f5, #ff7676);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  #designCardBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 500px;
+    width: 50%;
+    h2{
+      position: absolute;
+      top:80px;
+      
+    }
+  }
+  #designCardBox2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    h2{
+      margin-bottom: 30px;
+    }
+  }
+}
+
+#mainCard{
+  width: 200px;
+  height: 300px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.83);
+  position: absolute;
+  top: 130px;
+  #title{
+    margin-top: 15px;
+    font-size: 18px;
+    text-align: center;
+    color: #6a6464
+  }
+  #image{
+    height: 140px;
+    width: 150px;
+    margin: 20px auto;
+  }
+  #quantity{
+    font-size: 14px;
+    text-align: center;
+    color: #6a6464;
+    
+  }
+  #clicker{
+    width: 130px;
+    height: 37px;
+    border: 1px solid #6a6464;
+    border-radius: 40px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 10px;
+    box-shadow: 0 2px 1px grey;
+    margin-bottom: 10px;
+    #leftarrow{
+      height: 25px;
+      width: 25px;
+      border-radius: 50%;
+      border: 1px solid #6a6464;
+      font-size: 12px;
+      line-height: 25px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin: 5px 5px;
+      text-align: center;
+      color: #6a6464;
+      box-shadow: 0px 2px 1px grey;
+      &:hover{
+        cursor: pointer;
+      }
+    }
+    #rightarrow{
+      height: 25px;
+      width: 25px;
+      border-radius: 50%;
+      border: 1px solid #6a6464;
+      position: absolute;
+      font-size: 12px;
+      line-height: 25px;
+      top: 0;
+      right: 0;
+      margin: 5px 5px;
+      text-align: center;
+      color: #6a6464;
+      box-shadow: 0px 2px 1px grey;
+      &:hover{
+        cursor: pointer;
+      }
+    }
+    #counter{
+      position: absolute;
+      top:50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #6a6464;
+      font-size: 15px;
+    }
+  }
+  
+}
+#mainCard2{
+  width: 200px;
+  height: 300px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.83);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  #title2{
+    margin-top: 15px;
+    font-size: 18px;
+    text-align: center;
+    color: #6a6464
+  }
+  #image2{
+    height: 140px;
+    width: 150px;
+    margin: 20px auto;
+  }
+  #quantity2{
+    font-size: 14px;
+    text-align: center;
+    color: #6a6464;
+    margin-bottom: 20px;
+  }
+  #clicker2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 130px;
+    border: 1px solid #6a6464;
+    border-radius: 40px;
+    height: 40px;
+    box-shadow: 0px 2px 5px grey;
+    margin-bottom: 20px;
+    #leftarrow2, #rightarrow2{
+      border: 1px solid #6a6464;
+      border-radius: 50%;
+      font-size: 12px;
+      color: #6a6464;
+      width: 25px;
+      height: 24px;
+      margin: 5px;
+      line-height: 24px;
+      box-shadow: 0 1px 3px grey;
+      &:hover{
+        cursor: pointer;
+      }
+      p{
+        text-align: center;
+      }
+      
+    }
+    #counter2{
+       color: #6a6464;
+    }
+  }
+}
+
+//#testyyy{
+//  position: relative;
+//  height: 500px;
+//  width: 300px;
+//  #leftarrow2{
+//    font-size: 50px;
+//    line-height: 100px;
+//    border-radius: 50%;
+//    border: 5px solid black;
+//    width: 100px;
+//    height: 100px;
+//    display: flex;
+//    justify-content: center;
+//    align-items: center;
+//    text-align: center;
+//    p{
+//      margin-left: -10px;
+//    }
+//
+//  }
+//  #rightarrow2{
+//    font-size: 70px;
+//    padding: 20px;
+//    border-radius: 50%;
+//    border: 5px solid black;
+//    width: 100px;
+//    height: 100px;
+//    position: absolute;
+//    top: 50%;
+//    left: 50%;
+//    transform: translate(-50%, -50%);
+//    margin-left: -15px;
+//    p{
+//      position: absolute;
+//      top: 50%;
+//      left: 50%;
+//      transform: translate(-50%, -50%);
+//      margin-left: -5px;
+//     
+//    }
+//  }
+//}

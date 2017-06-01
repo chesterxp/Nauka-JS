@@ -152,6 +152,68 @@ $('#link4').click(function(){
   $('body').animate({scrollTop:$path},1000);
 });
 
+//------------------------------designCard--------------------------
+$count = 0;
+$('#leftarrow').click(function(){
+  if($count>0){
+    $count--;
+    $('#counter').text($count);
+  }
+});
 
+$('#leftarrow').mousedown(function(){
+  $(this).css('box-shadow','0px 0px 0px grey');
+});
+$('#leftarrow').mouseup(function(){
+  $(this).css('box-shadow','0px 3px 1px grey');
+});
 
+$('#rightarrow').click(function(){
+
+  if($count<11){
+    $count++;
+    $('#counter').text($count);
+      if($count===11){
+        $('#counter').text('MAX');
+      }
+}
+});
+$('#rightarrow').mousedown(function(){
+  $(this).css('box-shadow','0px 0px 0px grey');
+});
+$('#rightarrow').mouseup(function(){
+  $(this).css('box-shadow','0px 3px 1px grey');
+});
+
+$count2 = 0;
+$('#leftarrow2').click(function(){
+  if($count2>0){
+    $count2--;
+    $('#counter2').text($count2);
+  }
+});
+
+$('#leftarrow2').mousedown(function(){
+  $(this).css('box-shadow','0px 0px 0px grey');
+});
+$('#leftarrow2').mouseup(function(){
+  $(this).css('box-shadow','0px 3px 1px grey');
+});
+
+$('#rightarrow2').click(function(){
+
+  if($count2<11){
+    $count2++;
+    $('#counter2').text($count2);
+      if($count2===11){
+        $('#counter2').text('MAX');
+      }
+}
+});
+$('#rightarrow2').mousedown(function(){
+  $(this).css('box-shadow','0px 0px 0px grey');
+});
+$('#rightarrow2').mouseup(function(){
+  $(this).css('box-shadow','0px 3px 1px grey');
+});
 

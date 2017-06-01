@@ -1331,3 +1331,174 @@ canvas {
   color: white;
   line-height: 100px;
 }
+#designCard {
+  background: linear-gradient(10deg, #f079f5, #ff7676);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#designCard #designCardBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 500px;
+  width: 50%;
+}
+#designCard #designCardBox h2 {
+  position: absolute;
+  top: 80px;
+}
+#designCard #designCardBox2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+}
+#designCard #designCardBox2 h2 {
+  margin-bottom: 30px;
+}
+#mainCard {
+  width: 200px;
+  height: 300px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.83);
+  position: absolute;
+  top: 130px;
+}
+#mainCard #title {
+  margin-top: 15px;
+  font-size: 18px;
+  text-align: center;
+  color: #6a6464;
+}
+#mainCard #image {
+  height: 140px;
+  width: 150px;
+  margin: 20px auto;
+}
+#mainCard #quantity {
+  font-size: 14px;
+  text-align: center;
+  color: #6a6464;
+}
+#mainCard #clicker {
+  width: 130px;
+  height: 37px;
+  border: 1px solid #6a6464;
+  border-radius: 40px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 10px;
+  box-shadow: 0 2px 1px grey;
+  margin-bottom: 10px;
+}
+#mainCard #clicker #leftarrow {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  border: 1px solid #6a6464;
+  font-size: 12px;
+  line-height: 25px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 5px 5px;
+  text-align: center;
+  color: #6a6464;
+  box-shadow: 0px 2px 1px grey;
+}
+#mainCard #clicker #leftarrow:hover {
+  cursor: pointer;
+}
+#mainCard #clicker #rightarrow {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  border: 1px solid #6a6464;
+  position: absolute;
+  font-size: 12px;
+  line-height: 25px;
+  top: 0;
+  right: 0;
+  margin: 5px 5px;
+  text-align: center;
+  color: #6a6464;
+  box-shadow: 0px 2px 1px grey;
+}
+#mainCard #clicker #rightarrow:hover {
+  cursor: pointer;
+}
+#mainCard #clicker #counter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #6a6464;
+  font-size: 15px;
+}
+#mainCard2 {
+  width: 200px;
+  height: 300px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.83);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+#mainCard2 #title2 {
+  margin-top: 15px;
+  font-size: 18px;
+  text-align: center;
+  color: #6a6464;
+}
+#mainCard2 #image2 {
+  height: 140px;
+  width: 150px;
+  margin: 20px auto;
+}
+#mainCard2 #quantity2 {
+  font-size: 14px;
+  text-align: center;
+  color: #6a6464;
+  margin-bottom: 20px;
+}
+#mainCard2 #clicker2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 130px;
+  border: 1px solid #6a6464;
+  border-radius: 40px;
+  height: 40px;
+  box-shadow: 0px 2px 5px grey;
+  margin-bottom: 20px;
+}
+#mainCard2 #clicker2 #leftarrow2,
+#mainCard2 #clicker2 #rightarrow2 {
+  border: 1px solid #6a6464;
+  border-radius: 50%;
+  font-size: 12px;
+  color: #6a6464;
+  width: 25px;
+  height: 24px;
+  margin: 5px;
+  line-height: 24px;
+  box-shadow: 0 1px 3px grey;
+}
+#mainCard2 #clicker2 #leftarrow2:hover,
+#mainCard2 #clicker2 #rightarrow2:hover {
+  cursor: pointer;
+}
+#mainCard2 #clicker2 #leftarrow2 p,
+#mainCard2 #clicker2 #rightarrow2 p {
+  text-align: center;
+}
+#mainCard2 #clicker2 #counter2 {
+  color: #6a6464;
+}
