@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  //wysłanie danych z formularza
     $('#login').submit(function() {
     var formData = $(this).serialize();
     $.post('login.php',formData,processData);
@@ -18,6 +19,7 @@ $(document).ready(function(){
     }
     return false;  
   });
+  //załadowanie danych z innej strony bez przeladowania
     $('#list a').click(function(e){
     var url = $(this).attr('href');
     console.log(url);
