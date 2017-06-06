@@ -4,8 +4,29 @@
   <meta charset="UTF-8">
   <title>Array Cardio 💪</title>
 </head>
+<style>
+  body{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;margin: 0;
+    padding: 0;
+  }
+  p{
+    color: white;
+    background: #646464;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 40px;
+    font: 20px;
+    margin: 0 auto;
+    
+  }
+  </style>
 <body>
-  <p><em>Psst: have a look at the JavaScript Console</em> 💁</p>
+  
+  <div id="showMe"></div>
   <script>
     // Get your shorts on - this is an array workout!
     // ## Array Cardio Day 1
@@ -34,7 +55,7 @@
     
     // Array.prototype.filter()
     // 1. Filter the list of inventors for those who were born in the 1500's
-    var len = inventors.length;
+//    var len = inventors.length;
 //    for (var i=0;i<len;i++){
 //      var val = inventors[i].year;
 //      if( val> 1500 && val <1599){
@@ -150,12 +171,12 @@
 //      
 //    });
     
-      const alpha = people.sort(function(lastOne, nextOne){
-          const parts = lastOne.split(', ');
+//      const alpha = people.sort(function(lastOne, nextOne){
+//          const parts = lastOne.split(', ');
       //return aLast > bLast ? 1 : -1;
       //console.log(parts);
       
-    });
+//    });
     
 //    var people2 = ['lukasz michal zaw pierwszy', 'aneta weronika zaw','daria monika zaw','tomek rysiek dom'];
 //    
@@ -172,17 +193,84 @@
     //-----------------------------------------------------------------------------------------------------------
     // 8. Reduce Exercise
     // Sum up the instances of each of these
-    const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
-    
-    const transport = data.reduce(function(obj, item){
-      if(!obj[item]){
-        obj[item] = 0;
+//    const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
+//    
+//    const transport = data.reduce(function(obj, item){
+//      if(!obj[item]){
+//        obj[item] = 0;
+//      }
+//      obj[item]++;
+//      return obj;
+//    },{});
+//    
+//    console.log(transport);
+    var text2 = '{"name":["Jan","Kowalski"],"email":"jan@Kowalski.pl","settings":{"sound":"off","fullScreen":true,"newsDisplayed":5},"Characters":[{"name":"Conen","level":10,"items":["topor"],"hungry":true},{"name":"Druzzt","level":4,"items":["sejmitar","sejmitar"],"hungry":true},{"name":"Garelt","level":10,"items":["miecz","miecz"],"hungry":true}]}';
+    //console.log(text2);
+    var obj2 = JSON.parse(text2);
+    //console.log(obj2);
+    var msg = "<p>Użytkownik " + obj2.name + '</br>';
+    msg += "Adres email " + obj2.email + '</br>';
+    msg += soundON();
+    msg += "<p>Posiada " + obj2.Characters.length + " postacie</p>";
+    msg += "<p>Sa to: <br>" + showHeros()+'</p>';
+    msg += "<p>koniec</p>"; 
+    function soundON(){
+      var settings = "";
+      if (obj2.settings.sound === 'off'){
+        settings += "<p> Nie lubi słuchac muzy" +'</br>';
       }
-      obj[item]++;
-      return obj;
-    },{});
+      else{
+        settings += "Lubi słuchać muzy"+'</br>';
+      };
+      
+      if(obj2.settings.fullScreen == true){
+        settings += "Gra na fullScrrenie" +'</br>';
+      }
+      else{
+        settings += "Nie lubi grać na fullScrrenie" +'</br>';
+      };
+      settings += "Wyświetla "+obj2.settings.newsDisplayed + ' newsów na jednej stronie</p>';
+      return settings;
+    };
+    function areHungry(number){
+      var hungry = '';
+      if (obj2.Characters[number].hungry == true){
+        hungry += "Czy jest głodny: TAK";
+      }
+      else{
+        hungry += "<p>Czy jest głodny: NIE</p>";
+      }
+      return hungry;
+    }
+    function showHeros(){
+      var heros ="";
+      for (var i=0;i<3;i++){
+        heros += '<p>' + obj2.Characters[i].name + '<br/>';
+        heros += "LvL: " + obj2.Characters[i].level + '<br>';
+        heros += "Posiadane bronie: " + obj2.Characters[i].items + '<br>';
+        heros += areHungry(i) + '</p>';
+      }
+      return heros;
+    }
+  //console.log(obj2.Characters[1].hungry);  
     
-    console.log(transport);
+    showMe.innerHTML = msg;
+    
+//    var text = '{"employees":[' +
+//      '{"firstName":"John","lastName":"Doe" },' +
+//      '{"firstName":"Anna","lastName":"Smith" },' +
+//      '{"firstName":"Peter","lastName":"Jones" }]}';
+//    console.log(text);
+//    var obj = JSON.parse(text);
+//    
+//    console.log(obj);
+//    var showMe = document.querySelector('#showMe');
+//    
+//    
+//    var imie = obj.employees[2].firstName + " "+ obj.employees[2].lastName;
+//    var wellcome = '<h1> Witamy na naszej stronie </h1>'; 
+//    wellcome += '<h2> '+ imie+' </h2>'; 
+//    showMe.innerHTML = wellcome;
   </script>
 </body>
 </html>

@@ -1,0 +1,7 @@
+'{
+"name":["Jan","Kowalski"],
+"email":"jan@Kowalski.pl",
+"settings":{"sound":"off","fullScreen":true,"newsDisplayed":5},
+"Characters":[
+  {"name":"Conen","level":10,"items":["topor"],"hungry":true},
+  {"name":"Druzzt","level":4,"items":["sejmitar","sejmitar"],"hungry":true},{"name":"Garelt","level":10,"items":["miecz","miecz"],"hungry":true}]}';
