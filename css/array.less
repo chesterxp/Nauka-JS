@@ -1,3 +1,6 @@
+*{
+  box-sizing: border-box;
+}
 .box{
   background: linear-gradient(45deg, #546580, #0a2665);
   font-size: 20px;
@@ -49,4 +52,30 @@
   padding:10px 20px;
   background: #ff4545;
   color: aliceblue;
+}
+
+.box2{
+  background: linear-gradient(30deg,#f43e3e,#841f1f);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  
+  .city{
+    background: #555555;
+    text-align: center;
+    width: 300px;
+    border: 2px solid #000000;
+    box-shadow: 0px 4px 10px black;
+    margin: 10px;
+  }
+  .nameCity, .populationCity{
+    padding: 10px 20px;
+    font-size: 20px;
+    color: #d4cec1;
+    .title, .value{
+      display: inline-block;
+      width: 45%;
+    }
+  }
 }
