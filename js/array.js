@@ -11,7 +11,32 @@
 //    ']}';
 //var game = JSON.parse(data);
 
-
+var pogoda = {
+  "latitude": 47.20296790272209,
+  "longitude": -123.41670367098749,
+  "timezone": "America/Los_Angeles",
+  "currently": {
+    "time": 1453402675,
+    "summary": "Rain",
+    "icon": "rain",
+    "nearestStormDistance": 0,
+    "precipIntensity": 0.1685,
+    "precipIntensityError": 0.0067,
+    "precipProbability": 1,
+    "precipType": "rain",
+    "temperature": 48.71,
+    "apparentTemperature": 46.93,
+    "dewPoint": 47.7,
+    "humidity": 0.96,
+    "windSpeed": 4.64,
+    "windBearing": 186,
+    "visibility": 4.3,
+    "cloudCover": 0.73,
+    "pressure": 1009.7,
+    "ozone": 328.35
+  }};
+  
+  console.log(pogoda.latitude);
 
 var box = $('.box');
 
@@ -32,10 +57,16 @@ function showCards(){
 }
 $('#klik').click(function(){
   $.ajax({
-    url:'dane/dane.txt',
+    url:'dane/pogoda.txt',
     success: function(s){
-      game = JSON.parse(s);
-      showCards();
+      //game = JSON.parse(s);
+      //showCards();
+      
+      //console.log(typeof s);
+      console.log(s);
+      var args = Array.from(arguments);
+      console.log(args);
+      
     },
     error:function(e){
       alert('blad');
@@ -86,9 +117,9 @@ $('#klik2').click(function(){
     });
   });
 
-$('#klik3').click(function(){
-  console.log(miasta);
-})
+//$('#klik3').click(function(){
+//  console.log(miasta);
+//})
 var ilosc;
 var box2 = $('.box2');
 function pokazMiasto(){

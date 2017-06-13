@@ -1,0 +1,28 @@
+{"authors":[
+  {"name":"Charles Schulz",
+   "quotes":"I have a new philosophy. I'm only going to dread one day at a time."},
+  {"name":"Jack Wagner",
+   "quotes":"Reality is the leading cause of stress for those in touch with it."},
+  {"name":"Jonathan Carroll",
+   "quotes":"To, że milczę, nie znaczy, że nie mam nic do powiedzenia."},
+  {"name":"Mark Twain",
+   "quotes":"Few things are harder to put up with than the annoyance of a good example."},
+  {"name":"Oscar Wilde",
+   "quotes":"The pure and simple truth is rarely pure and never simple."},
+  {"name":"David Letterman",
+   "quotes":"There's no business like show business, but there are several businesses like accounting."},
+  {"name":"Batman",
+   "quotes":"Always I will be better than Superman!!!"},
+  {"name":"Goku",
+   "quotes":"Kaaaaa meeeeeeee, haaaameeeeee aaaa aaaa grrrr   bum!!!"},
+  {"name":"Spiderman",
+   "quotes":"Bo we mnie jest moc"},
+   {"name":"przysłowie chińskie",
+   "quotes":"Szanse nigdy nie ulegają zatraceniu. Jeśli Ty ich nie wykorzystasz, wykorzysta je ktoś inny."}
+   
+   ]}
+  
+  
+  
+  
+ 

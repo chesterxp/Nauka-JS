@@ -460,3 +460,6 @@ var onMouseLeave = function () {
 photo.addEventListener('mouseenter', onMouseEnter);
 photo.addEventListener('mouseleave', onMouseLeave);
 photo.addEventListener('mousemove', onMouseMove);
+
+
+
